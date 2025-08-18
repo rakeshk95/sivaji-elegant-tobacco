@@ -1,46 +1,54 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Leaf } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "About Us", href: "#about" },
-    { name: "Tobacco Varieties", href: "#varieties" },
-    { name: "Exports", href: "#exports" },
-    { name: "Our Business", href: "#business" },
-    { name: "Contact", href: "#contact" },
+    { name: "HOME", href: "/" },
+    { name: "ABOUT US", href: "/about" },
+    { name: "TOBACCO VARIETIES", href: "/varieties" },
+    { name: "CONTACT", href: "/contact" },
   ];
 
   return (
-    <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
+    <nav className="fixed top-0 w-full bg-gray-900 border-b border-pink-200/20 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="flex items-center justify-center w-10 h-10 bg-primary rounded-lg">
-              <Leaf className="w-6 h-6 text-primary-foreground" />
+          <Link to="/" className="flex items-center space-x-3">
+            <div className="flex items-center justify-center w-8 h-8 bg-yellow-500 rounded-lg">
+              <Leaf className="w-5 h-5 text-yellow-600" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-primary">Sivaji Enterprises</h1>
-              <p className="text-xs text-muted-foreground">Premium Tobacco Trading</p>
+              <h1 className="text-lg font-bold text-white mb-0">SIVAJI</h1>
+              <div className="flex flex-col">
+                <span className="text-sm font-bold text-white -mt-1">ENTERPRISES</span>
+                <div className="w-full h-px bg-white mt-0.5"></div>
+                <span className="text-xs text-white/80 mt-0.5">Tobacco Packers & Exporters</span>
+              </div>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
-                className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                to={item.href}
+                className={`font-bold transition-colors duration-200 ${
+                  location.pathname === item.href
+                    ? "text-yellow-400"
+                    : "text-white hover:text-yellow-400"
+                }`}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
-            <Button variant="hero" size="sm">
+            <Button variant="outline" size="sm" className="border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-gray-900">
               Get Quote
             </Button>
           </div>
@@ -51,6 +59,7 @@ const Navbar = () => {
               variant="ghost"
               size="sm"
               onClick={() => setIsOpen(!isOpen)}
+              className="text-white hover:bg-gray-800"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </Button>
@@ -59,21 +68,27 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden border-t border-border">
+          <div className="md:hidden border-t border-gray-700 bg-gray-900">
             <div className="flex flex-col space-y-4 py-4">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
-                  className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                  to={item.href}
+                  className={`font-bold transition-colors duration-200 px-4 ${
+                    location.pathname === item.href
+                      ? "text-yellow-400"
+                      : "text-white hover:text-yellow-400"
+                  }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
-              <Button variant="hero" size="sm" className="w-fit">
-                Get Quote
-              </Button>
+              <div className="px-4">
+                <Button variant="outline" size="sm" className="border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-gray-900 w-full">
+                  Get Quote
+                </Button>
+              </div>
             </div>
           </div>
         )}

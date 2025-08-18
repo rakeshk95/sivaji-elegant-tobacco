@@ -11,12 +11,12 @@ const Footer = () => {
   ];
 
   const services = [
+    "Dark Fire Cured Tobacco",
     "Virginia Tobacco",
     "Burley Tobacco",
-    "Dark Fire Cured",
     "Custom Processing",
     "Quality Testing",
-    "Global Shipping"
+    "Global Export"
   ];
 
   const scrollToTop = () => {
@@ -36,13 +36,14 @@ const Footer = () => {
               </div>
               <div>
                 <h3 className="text-2xl font-bold">Sivaji Enterprises</h3>
-                <p className="text-primary-foreground/80">Premium Tobacco Trading</p>
+                <p className="text-primary-foreground/80">Premium Tobacco Packers & Exporters</p>
               </div>
             </div>
             
             <p className="text-primary-foreground/90 leading-relaxed max-w-md">
-              Your trusted partner in premium tobacco trading since 1995. We deliver excellence 
-              through superior quality products, cutting-edge facilities, and unmatched customer service.
+              We place a premium on meeting customer needs, providing premium Tobacco products 
+              made from Tobacco. We are primarily concerned with our customers' bottom lines. 
+              By providing only the highest quality Tobacco Products, we have set ourselves apart from the competition.
             </p>
 
             <div className="space-y-3">
@@ -60,7 +61,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-accent" />
-                <span>Andhra Pradesh, India</span>
+                <span>1-929/4, Krishna Reddy Colony, Pullarao Bypass Road, Guntur Dist, Andhra Pradesh, India</span>
               </div>
             </div>
           </div>

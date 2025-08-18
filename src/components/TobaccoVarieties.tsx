@@ -1,169 +1,227 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Leaf, Star, Target, Zap } from "lucide-react";
+import { Leaf } from "lucide-react";
 import tobaccoWarehouseImage from "@/assets/tobacco-warehouse.jpg";
 import tobaccoProcessingImage from "@/assets/tobacco-processing.jpg";
 
 const TobaccoVarieties = () => {
-  const varieties = [
-    {
-      name: "Virginia Tobacco",
-      grade: "Premium Grade A",
-      nicotine: "2.5-3.5%",
-      moisture: "12-14%",
-      features: ["Bright Color", "Sweet Aroma", "Low Nicotine"],
-      image: tobaccoWarehouseImage,
-      popular: true
-    },
-    {
-      name: "Burley Tobacco",
-      grade: "Export Quality",
-      nicotine: "3.5-4.5%",
-      moisture: "10-12%",
-      features: ["Air Cured", "Light Brown", "High Quality"],
-      image: tobaccoProcessingImage,
-      popular: false
-    },
-    {
-      name: "Dark Fire Cured",
-      grade: "Special Grade",
-      nicotine: "4.0-5.0%",
-      moisture: "8-10%",
-      features: ["Rich Flavor", "Dark Color", "Fire Cured"],
-      image: tobaccoWarehouseImage,
-      popular: true
-    }
-  ];
+	const [activeTab, setActiveTab] = useState(0);
 
-  const specifications = [
-    { icon: <Target className="w-5 h-5" />, label: "Purity", value: "99.9%" },
-    { icon: <Zap className="w-5 h-5" />, label: "Moisture", value: "8-14%" },
-    { icon: <Star className="w-5 h-5" />, label: "Grade", value: "Export A+" },
-    { icon: <Leaf className="w-5 h-5" />, label: "Origin", value: "India" }
-  ];
+	const varieties = [
+		{
+			name: "Flue Cured Virginia Tobacco (Traditional)",
+			planting: "Mid October to First week of November",
+			marketing: "February to April",
+			color: "Lemon",
+			leafSize: "Medium to Large",
+			poreVolume: "0.13",
+			fillingValue: "2.6 to 2.8",
+			nicotine: "1.0 to 2.5",
+			reducingSugars: "8.6 to 20.9",
+			image: tobaccoWarehouseImage,
+		},
+		{
+			name: "Flue Cured Virginia Tobacco (Mysore)",
+			planting: "Early May",
+			marketing: "September to December",
+			color: "Lemon to Orange",
+			leafSize: "Large",
+			poreVolume: "0.13",
+			fillingValue: "2.9 to 3.8",
+			nicotine: "1.5 to 2.5",
+			reducingSugars: "18.0 to 27.0",
+			image: tobaccoProcessingImage,
+		},
+		{
+			name: "Flue Cured Virginia (NLS)",
+			planting: "Early October",
+			marketing: "February to April",
+			color: "Lemon - Orange to Orange / mahogany",
+			leafSize: "Large",
+			poreVolume: "0.13",
+			fillingValue: "2.2 to 2.8",
+			nicotine: "1.5 to 3.0-4.0",
+			reducingSugars: "13.8 to 23.5",
+			image: tobaccoWarehouseImage,
+		},
+		{
+			name: "Flue Cured Virginia (SLS)",
+			planting: "Mid-October to mid-November",
+			marketing: "February to May",
+			color: "Lemon to Orange",
+			leafSize: "Small to Medium",
+			poreVolume: "0.13",
+			fillingValue: "2.6 to 3.5",
+			nicotine: "1.0 to 2.0",
+			reducingSugars: "10 to 17.5",
+			image: tobaccoProcessingImage,
+		},
+		{
+			name: "Indian Burley Tobacco",
+			planting: "July Last week to August Ist week",
+			marketing: "November to January",
+			color: "Rich-tan to Brown",
+			leafSize: "Medium to Large",
+			poreVolume: "0.18 to 0.28",
+			fillingValue: "5.0 to 6.2",
+			nicotine: "1.25 to 3.5",
+			reducingSugars: "1.6 to 3.6",
+			image: tobaccoWarehouseImage,
+		},
+		{
+			name: "Dark Fired Tobacco",
+			planting: "Monsoon Crop: Mid August -1st week of September",
+			marketing: "Monsoon Crop: February to March",
+			color: "Nut-Brown",
+			leafSize: "Medium to heavy",
+			poreVolume: "0.07 to 0.20",
+			fillingValue: "3.8 to 5.8",
+			nicotine: "1.0 to 3.25",
+			reducingSugars: "3.0 to 9.0",
+			image: tobaccoProcessingImage,
+		},
+		{
+			name: "Sun-Cured Burley Tobacco (Traditional)",
+			planting: "October 1st week to November 1st week",
+			marketing: "May-June, Winter Crop April to June",
+			color: "Rich-tan to Brown",
+			leafSize: "Medium to Heavy",
+			poreVolume: "---",
+			fillingValue: "---",
+			nicotine: "2.5 to 4.5",
+			reducingSugars: "1.89 to 4.8",
+			image: tobaccoWarehouseImage,
+		},
+	];
 
-  return (
-    <section id="varieties" className="py-24 bg-background">
-      <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="tobacco-badge mb-4 mx-auto animate-fade-in">
-            <Leaf className="w-4 h-4" />
-            <span>Premium Tobacco Varieties</span>
-          </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6 animate-fade-in">
-            Our Tobacco
-            <span className="text-primary"> Collection</span>
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto animate-slide-in-right">
-            Discover our carefully curated selection of premium tobacco varieties, 
-            each processed to meet the highest international quality standards.
-          </p>
-        </div>
+	const additionalVarieties = [
+		"chewing tobacco",
+		"cigar-wrapper",
+		"Oriental",
+		"Traditional Burley (HDBRG)",
+		"Dark fire cured",
+		"FCV Rustica",
+		"Bidi",
+		"Hookah tobacco",
+		"Cheroot",
+	];
 
-        {/* Specifications */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 animate-fade-in">
-          {specifications.map((spec, index) => (
-            <Card key={index} className="tobacco-card text-center">
-              <CardContent className="p-6">
-                <div className="flex items-center justify-center w-12 h-12 bg-primary/10 text-primary rounded-lg mx-auto mb-4">
-                  {spec.icon}
-                </div>
-                <div className="text-2xl font-bold text-foreground mb-1">{spec.value}</div>
-                <div className="text-sm text-muted-foreground">{spec.label}</div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+	return (
+		<section id="varieties" className="py-24 bg-background">
+			<div className="container mx-auto px-4">
+				{/* Header */}
+				<div className="text-center mb-16">
+					<div className="tobacco-badge mb-4 mx-auto animate-fade-in">
+						<Leaf className="w-4 h-4" />
+						<span>Premium Tobacco Varieties</span>
+					</div>
+					<h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6 animate-fade-in">
+						Tobacco
+						<span className="text-primary"> Varieties</span>
+					</h2>
+				</div>
 
-        {/* Varieties Grid */}
-        <div className="grid lg:grid-cols-3 gap-8 animate-fade-in">
-          {varieties.map((variety, index) => (
-            <Card key={index} className="group overflow-hidden hover-glow">
-              <div className="relative h-64 overflow-hidden">
-                <img 
-                  src={variety.image} 
-                  alt={variety.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
-                
-                {variety.popular && (
-                  <Badge className="absolute top-4 left-4 bg-accent text-accent-foreground">
-                    <Star className="w-3 h-3 mr-1" />
-                    Popular
-                  </Badge>
-                )}
-                
-                <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <h3 className="text-xl font-bold mb-1">{variety.name}</h3>
-                  <p className="text-white/90 text-sm">{variety.grade}</p>
-                </div>
-              </div>
-              
-              <CardContent className="p-6">
-                {/* Specifications */}
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div>
-                    <div className="text-sm text-muted-foreground">Nicotine Content</div>
-                    <div className="font-semibold text-foreground">{variety.nicotine}</div>
-                  </div>
-                  <div>
-                    <div className="text-sm text-muted-foreground">Moisture Level</div>
-                    <div className="font-semibold text-foreground">{variety.moisture}</div>
-                  </div>
-                </div>
+				{/* Varieties: Left list + Right details */}
+				<div className="max-w-6xl mx-auto animate-fade-in grid lg:grid-cols-12 gap-8">
+					{/* Left list */}
+					<div className="lg:col-span-4">
+						<div className="space-y-2">
+							{varieties.map((variety, index) => (
+								<button
+									key={index}
+									onClick={() => setActiveTab(index)}
+									className={`w-full text-left px-4 py-3 rounded-lg border transition-colors ${
+										activeTab === index
+											? "bg-primary text-primary-foreground border-primary"
+											: "bg-white hover:bg-muted border-border"
+									}`}
+								>
+									<div className="font-semibold text-sm">{variety.name}</div>
+									<div className="text-xs opacity-80">{variety.color}</div>
+								</button>
+							))}
+						</div>
+					</div>
 
-                {/* Features */}
-                <div className="mb-6">
-                  <div className="text-sm text-muted-foreground mb-2">Key Features</div>
-                  <div className="flex flex-wrap gap-2">
-                    {variety.features.map((feature, featureIndex) => (
-                      <Badge key={featureIndex} variant="outline" className="text-xs">
-                        {feature}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
+					{/* Right detail panel */}
+					<div className="lg:col-span-8">
+						{/* Container matching screenshot: yellow title bar + table rows with image */}
+						<div className="bg-white rounded-lg border overflow-hidden">
+							{/* Title bar */}
+							<div className="bg-yellow-400 text-gray-900 px-6 py-4 text-2xl font-bold">
+								{varieties[activeTab].name}
+							</div>
 
-                {/* Actions */}
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <Button variant="default" className="flex-1">
-                    Get Quote
-                  </Button>
-                  <Button variant="outline" className="flex-1">
-                    Learn More
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+							{/* Content grid: left specs, right image */}
+							<div className="grid lg:grid-cols-[1fr_260px]">
+								{/* Specs side */}
+								<div className="divide-y">
+									{/* Planting */}
+									<div className="px-6 py-3 font-semibold text-gray-900">PLANTING</div>
+									<div className="px-6 py-3 text-gray-700">{varieties[activeTab].planting}</div>
+									{/* Marketing */}
+									<div className="px-6 py-3 font-semibold text-gray-900">MARKETING</div>
+									<div className="px-6 py-3 text-gray-700">{varieties[activeTab].marketing}</div>
+									{/* Physical Characteristics */}
+									<div className="px-6 py-3 font-semibold text-gray-900">PHYSICAL CHARACTERISTICS</div>
+									<div className="px-6 py-3">
+										<div className="grid sm:grid-cols-2 gap-4 text-sm">
+											<div className="flex items-center justify-between border rounded-md p-2"><span className="text-gray-600">Color</span><span className="font-medium text-gray-900">{varieties[activeTab].color}</span></div>
+											<div className="flex items-center justify-between border rounded-md p-2"><span className="text-gray-600">Leaf Size</span><span className="font-medium text-gray-900">{varieties[activeTab].leafSize}</span></div>
+											<div className="flex items-center justify-between border rounded-md p-2"><span className="text-gray-600">Pore Volume (MI/Gm)</span><span className="font-medium text-gray-900">{varieties[activeTab].poreVolume}</span></div>
+											<div className="flex items-center justify-between border rounded-md p-2"><span className="text-gray-600">Filling Value (CC/GM)</span><span className="font-medium text-gray-900">{varieties[activeTab].fillingValue}</span></div>
+										</div>
+									</div>
+									{/* Chemical Characteristics */}
+									<div className="px-6 py-3 font-semibold text-gray-900">CHEMICAL CHARACTERISTICS</div>
+									<div className="px-6 py-3">
+										<div className="grid sm:grid-cols-2 gap-4 text-sm">
+											<div className="flex items-center justify-between border rounded-md p-2"><span className="text-gray-600">Nicotine (%)</span><span className="font-medium text-gray-900">{varieties[activeTab].nicotine}</span></div>
+											<div className="flex items-center justify-between border rounded-md p-2"><span className="text-gray-600">Reducing Sugars (%)</span><span className="font-medium text-gray-900">{varieties[activeTab].reducingSugars}</span></div>
+										</div>
+									</div>
+								</div>
 
-        {/* CTA Section */}
-        <div className="text-center mt-16 animate-fade-in">
-          <div className="bg-muted/50 rounded-2xl p-8 md:p-12">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              Need Custom Tobacco Solutions?
-            </h3>
-            <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
-              We offer custom processing and blending services to meet your specific requirements. 
-              Contact our experts for personalized solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="hero" size="lg">
-                Request Custom Quote
-              </Button>
-              <Button variant="tobacco" size="lg">
-                Speak with Expert
-              </Button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+								{/* Image side */}
+								<div className="p-6 border-l flex items-start justify-center bg-white">
+									<div className="w-[220px] h-[300px] bg-gray-50 rounded-lg overflow-hidden shadow">
+										<img src={varieties[activeTab].image} alt={varieties[activeTab].name} className="w-full h-full object-contain" />
+									</div>
+								</div>
+							</div>
+
+							{/* Actions */}
+							<div className="flex flex-col sm:flex-row gap-3 p-6 border-t bg-white">
+								<Button className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold flex-1">Get Quote</Button>
+								<Button variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-50 flex-1">Learn More</Button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				{/* Additional Varieties (paragraph, like source) */}
+				<div className="mt-16 max-w-4xl mx-auto text-center animate-fade-in text-muted-foreground">
+					There are further sorts of {additionalVarieties.join(", ") }.
+				</div>
+
+				{/* CTA Section */}
+				<div className="text-center mt-16 animate-fade-in">
+					<div className="bg-primary/5 rounded-2xl p-8 md:p-12">
+						<h3 className="text-2xl font-bold text-foreground mb-4">Need Custom Tobacco Solutions?</h3>
+						<p className="text-muted-foreground mb-6 max-w-xl mx-auto">
+							We offer custom processing and blending services to meet your specific requirements.
+							Our cutting-edge facilities and skilled staff provide services on par with customer demands.
+						</p>
+						<div className="flex flex-col sm:flex-row gap-4 justify-center">
+							<Button variant="hero" size="lg">Request Custom Quote</Button>
+							<Button variant="tobacco" size="lg">Speak with Expert</Button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	);
 };
 
 export default TobaccoVarieties;

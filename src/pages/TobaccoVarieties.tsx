@@ -1,16 +1,12 @@
 import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
 import TobaccoVarieties from "@/components/TobaccoVarieties";
 import Footer from "@/components/Footer";
 
-const Index = () => {
+const TobaccoVarietiesPage = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <main>
-        <Hero />
-        <About />
+      <main className="pt-16">
         <TobaccoVarieties />
       </main>
       <Footer />
@@ -18,4 +14,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default TobaccoVarietiesPage;
