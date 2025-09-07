@@ -1,7 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
+import TobaccoGallery from "@/components/TobaccoGallery";
 import TobaccoVarieties from "@/components/TobaccoVarieties";
+import Leadership from "@/components/Leadership";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -10,8 +11,9 @@ const Index = () => {
       <Navbar />
       <main>
         <Hero />
-        <About />
-        <TobaccoVarieties />
+        <TobaccoGallery />
+        {/* <TobaccoVarieties /> */}
+        <Leadership />
       </main>
       <Footer />
     </div>

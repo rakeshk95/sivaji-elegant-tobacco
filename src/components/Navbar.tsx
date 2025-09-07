@@ -48,9 +48,6 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
-            <Button variant="outline" size="sm" className="border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-gray-900">
-              Get Quote
-            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -84,11 +81,6 @@ const Navbar = () => {
                   {item.name}
                 </Link>
               ))}
-              <div className="px-4">
-                <Button variant="outline" size="sm" className="border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-gray-900 w-full">
-                  Get Quote
-                </Button>
-              </div>
             </div>
           </div>
         )}

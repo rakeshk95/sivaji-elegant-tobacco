@@ -1,15 +1,13 @@
 import Navbar from "@/components/Navbar";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+import ContactInfo from "@/components/ContactInfo";
 
 const ContactPage = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
       <main className="pt-16">
-        <Contact />
+        <ContactInfo />
       </main>
-      <Footer />
     </div>
   );
 };
