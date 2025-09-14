@@ -17,7 +17,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 w-full bg-gray-900 border-b border-pink-200/20 z-50">
+    <nav className="fixed top-0 w-full bg-black border-b border-pink-200/20 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -70,7 +70,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden border-t border-gray-700 bg-gray-900">
+          <div className="md:hidden border-t border-gray-700 bg-black">
             <div className="flex flex-col space-y-4 py-4">
               {navItems.map((item) => (
                 <Link
