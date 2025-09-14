@@ -44,8 +44,8 @@ const FarmGrades = () => {
       </div>
 
       {/* Content Container */}
-      <div className="container mx-auto px-2 py-16 w-full max-w-full overflow-hidden">
-        <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 space-y-8">
+      <div className="container mx-auto px-6 py-20 w-full max-w-full overflow-hidden">
+        <div className="max-w-5xl mx-auto bg-white rounded-xl shadow-lg p-10 md:p-12 lg:p-16 space-y-12">
           
           {/* Farm Grades – Black Soil Tobacco */}
           <div>
@@ -165,9 +165,9 @@ const FarmGrades = () => {
       </div>
 
       {/* Farm Gallery Section */}
-      <div className="bg-gradient-to-br from-green-50 to-yellow-50 py-16">
-        <div className="container mx-auto px-2">
-          <div className="max-w-6xl mx-auto">
+      <div className="bg-gradient-to-br from-green-50 to-yellow-50 py-20">
+        <div className="container mx-auto px-6">
+          <div className="max-w-5xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-gray-800 mb-4">Our Farm Operations</h2>

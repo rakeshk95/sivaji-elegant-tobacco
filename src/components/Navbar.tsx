@@ -22,7 +22,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <div className="flex items-center justify-center w-32 h-16">
+            <div className="flex items-center justify-center w-40 h-20">
               <img 
                 src={logoImage} 
                 alt="Sivaji Enterprises Logo" 

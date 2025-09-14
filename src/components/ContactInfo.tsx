@@ -59,8 +59,8 @@ const ContactInfo = () => {
       </div>
 
       {/* Contact Information Section */}
-      <div className="bg-gradient-to-br from-green-50 to-yellow-50 py-12 w-full max-w-full overflow-hidden">
-        <div className="container mx-auto px-2 w-full max-w-full">
+      <div className="bg-gradient-to-br from-green-50 to-yellow-50 py-20 w-full max-w-full overflow-hidden">
+        <div className="container mx-auto px-6 w-full max-w-full">
           {/* Section Header */}
           <div className="text-center mb-10">
             <h2 className="text-4xl font-bold text-gray-800 mb-3">Get In Touch</h2>
@@ -70,7 +70,7 @@ const ContactInfo = () => {
           </div>
 
           {/* Contact Cards Grid */}
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 mb-10">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 mb-12">
             {/* Office Address Card */}
             <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 p-6 border border-gray-100 hover:border-green-300">
               <div className="flex items-center mb-4">
@@ -125,9 +125,9 @@ const ContactInfo = () => {
       </div>
 
       {/* Contact Form Section */}
-      <div className="bg-gradient-to-br from-gray-50 to-white py-12 w-full max-w-full overflow-hidden">
-        <div className="container mx-auto px-2 w-full max-w-full">
-          <div className="max-w-6xl mx-auto">
+      <div className="bg-gradient-to-br from-gray-50 to-white py-20 w-full max-w-full overflow-hidden">
+        <div className="container mx-auto px-6 w-full max-w-full">
+          <div className="max-w-5xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-10">
               <h2 className="text-4xl font-bold text-gray-800 mb-3">Send Us a Message</h2>
@@ -136,7 +136,7 @@ const ContactInfo = () => {
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-4 md:gap-6 lg:gap-8 items-start">
+            <div className="grid lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12 items-start">
               {/* Contact Form */}
               <div className="bg-white rounded-3xl shadow-2xl p-4 md:p-6 lg:p-8 border border-gray-100">
                 <div className="mb-6">
@@ -265,8 +265,8 @@ const ContactInfo = () => {
       </div>
 
       {/* Footer Bottom Section */}
-      <div className="bg-slate-800 text-white py-12">
-        <div className="container mx-auto px-4 text-center">
+      <div className="bg-slate-800 text-white py-20">
+        <div className="container mx-auto px-6 text-center">
           <h2 className="text-2xl font-bold mb-4 text-yellow-400">GET IN TOUCH WITH US</h2>
           <div className="w-full h-px bg-yellow-500 mb-6"></div>
 

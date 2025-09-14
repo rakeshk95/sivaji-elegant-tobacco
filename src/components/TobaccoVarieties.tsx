@@ -142,12 +142,6 @@ const TobaccoVarieties = () => {
               <h1 className="text-3xl md:text-4xl font-bold mb-4 animate-fade-in drop-shadow-lg transition-all duration-500 group-hover:text-yellow-400 group-hover:scale-105 group-hover:drop-shadow-2xl">
                 OUR PRODUCTS
               </h1>
-              <p className="text-xl text-white/90 mb-4 transition-all duration-500 group-hover:text-yellow-300 group-hover:scale-105">
-                TOBACCO VARIETIES
-              </p>
-              <p className="text-lg text-yellow-400 font-semibold animate-fade-in drop-shadow-md transition-all duration-500 group-hover:text-yellow-300 group-hover:scale-105 group-hover:drop-shadow-xl">
-                PREMIUM QUALITY TOBACCO PRODUCTS
-              </p>
               {/* Hover overlay effect */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg -m-4"></div>
             </div>

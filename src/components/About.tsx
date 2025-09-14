@@ -38,11 +38,11 @@ const About = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-2 py-24 w-full max-w-full overflow-hidden">
+      <div className="container mx-auto px-6 py-24 w-full max-w-full overflow-hidden">
 
         {/* About Content with Photos Side by Side */}
-        <div className="max-w-7xl mx-auto mb-20">
-          <div className="bg-white rounded-2xl p-6 md:p-8 lg:p-10 shadow-2xl">
+        <div className="max-w-6xl mx-auto mb-20">
+          <div className="bg-white rounded-2xl p-8 md:p-10 lg:p-12 shadow-2xl">
             <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-10 items-start">
               {/* Left Side - Content */}
               <div className="text-gray-800">
