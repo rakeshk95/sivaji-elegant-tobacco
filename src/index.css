@@ -147,6 +147,71 @@ Inspired by tobacco colors: warm ambers, rich browns, golden yellows, deep green
 
   body {
     @apply bg-background text-foreground font-sans;
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  html {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Prevent horizontal overflow */
+  .container {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Ensure all sections fit within viewport */
+  section {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  /* Prevent any element from exceeding viewport width */
+  * {
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+  
+  /* Additional overflow protection */
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+    width: 100vw !important;
+  }
+  
+  /* Force all elements to respect viewport width */
+  * {
+    box-sizing: border-box !important;
+  }
+  
+  /* Prevent any container from exceeding viewport */
+  .container, .max-w-4xl, .max-w-6xl, .max-w-7xl, .max-w-3xl {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Force all containers to stay within bounds */
+  .container, .max-w-4xl, .max-w-6xl, .max-w-7xl {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Ensure images don't cause overflow */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Fix any potential overflow from padding/margins */
+  .px-4, .px-6, .px-8, .px-12 {
+    padding-left: min(1rem, 4vw) !important;
+    padding-right: min(1rem, 4vw) !important;
   }
 
   /* Custom scrollbar */
@@ -205,5 +270,77 @@ Inspired by tobacco colors: warm ambers, rich browns, golden yellows, deep green
     @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
     background: var(--gradient-accent);
     color: hsl(var(--accent-foreground));
+  }
+
+  /* Custom animations for page loading and content movement */
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes bounce {
+    0%, 20%, 53%, 80%, 100% {
+      transform: translate3d(0,0,0);
+    }
+    40%, 43% {
+      transform: translate3d(0, -8px, 0);
+    }
+    70% {
+      transform: translate3d(0, -4px, 0);
+    }
+    90% {
+      transform: translate3d(0, -2px, 0);
+    }
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+  }
+
+  .animate-slide-up-delay {
+    animation: slideUp 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+
+  .animate-slide-up-delay-2 {
+    animation: slideUp 0.8s ease-out 0.4s forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  .animate-bounce {
+    animation: bounce 1s ease-in-out;
+  }
+
+  /* Enhanced pulse animation for SIVAJI ENTERPRISES */
+  @keyframes enhancedPulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  .animate-enhanced-pulse {
+    animation: enhancedPulse 2s ease-in-out infinite;
   }
 }

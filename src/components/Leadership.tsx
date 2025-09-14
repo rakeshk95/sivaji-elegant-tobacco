@@ -23,19 +23,17 @@ const Leadership = () => {
             <div className="text-center">
               <h3 className="text-2xl font-bold text-white mb-3 tracking-wide">FOUNDER</h3>
               <div className="w-12 h-0.5 bg-yellow-500 mx-auto mb-6 rounded-full"></div>
-              <div className="relative inline-block">
-                <img
-                  src={fatherImage}
-                  alt="Rayapati Venkateswarlu - Founder"
-                  className="w-full max-w-xs h-auto rounded-lg shadow-lg border-2 border-yellow-500"
-                />
-              </div>
+              <img
+                src={fatherImage}
+                alt="Rayapati Venkateswarlu - Founder"
+                className="w-full max-w-xs h-auto rounded-lg shadow-lg border-2 border-yellow-500 mx-auto"
+              />
             </div>
           </div>
 
           {/* Founder Section */}
-          <div className="order-2">
-            <div className="bg-white rounded-xl p-6 lg:p-8 shadow-xl">
+          <div className="order-2 flex items-center">
+            <div className="bg-white rounded-xl p-6 lg:p-8 shadow-xl w-full">
               <p className="text-orange-600 italic text-lg leading-normal mb-6">
                 As the Founder of Sivaji Enterprises, I bring more than 35 years of expertise in the tobacco industry — spanning cultivation, processing, and exports. With a deep understanding of every leaf and every stage of its growth, my lifelong commitment has been to deliver premium-quality tobacco to customers worldwide.
               </p>
@@ -59,19 +57,17 @@ const Leadership = () => {
             <div className="text-center">
               <h3 className="text-2xl font-bold text-white mb-3 tracking-wide">BUSINESS DIRECTOR</h3>
               <div className="w-12 h-0.5 bg-yellow-500 mx-auto mb-6 rounded-full"></div>
-              <div className="relative inline-block">
-                <img
-                  src={sivajiImage}
-                  alt="Business Director"
-                  className="w-full max-w-xs h-auto rounded-lg shadow-lg border-2 border-yellow-500"
-                />
-              </div>
+              <img
+                src={sivajiImage}
+                alt="Business Director"
+                className="w-full max-w-xs h-auto rounded-lg shadow-lg border-2 border-yellow-500 mx-auto"
+              />
             </div>
           </div>
 
           {/* Director Content */}
-          <div className="order-2">
-            <div className="bg-white rounded-xl p-6 lg:p-8 shadow-xl">
+          <div className="order-2 flex items-center">
+            <div className="bg-white rounded-xl p-6 lg:p-8 shadow-xl w-full">
               <p className="text-orange-600 italic text-lg leading-normal mb-6">
                 As the Business Director of Sivaji Enterprises, I work closely with our Founder to provide strategic direction and ensure that every decision aligns with our commitment to excellence. With a deep understanding of market demands and customer preferences, I strive to deliver the finest quality tobacco that meets global standards.
               </p>

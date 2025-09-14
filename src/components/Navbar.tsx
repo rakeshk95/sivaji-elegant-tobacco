@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import logoImage from "@/assets/WhatsApp Image 2025-09-14 at 09.02.03_452cd47f.jpg";
+import logoImage from "@/assets/logo.jpg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,24 +17,17 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 w-full bg-black border-b border-pink-200/20 z-50">
-      <div className="container mx-auto px-4">
+    <nav className="fixed top-0 left-0 right-0 bg-black border-b border-pink-200/20 z-50 w-screen">
+      <div className="container mx-auto px-2 overflow-hidden max-w-full">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
-            <div className="flex items-center justify-center w-20 h-16">
+          <Link to="/" className="flex items-center">
+            <div className="flex items-center justify-center w-32 h-16">
               <img 
                 src={logoImage} 
                 alt="Sivaji Enterprises Logo" 
-                className="w-full h-full object-contain"
+                className="w-full h-full object-contain max-w-full"
               />
-            </div>
-            <div>
-              <h1 className="text-lg font-bold text-white mb-0">SIVAJI ENTERPRISES</h1>
-              <div className="flex flex-col">
-                <div className="w-full h-px bg-white mt-0.5"></div>
-                <span className="text-xs text-white/80 mt-0.5">Trusted Since 1990</span>
-              </div>
             </div>
           </Link>
 

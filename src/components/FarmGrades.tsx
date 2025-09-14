@@ -6,7 +6,7 @@ import farmpic4 from "@/assets/farmpic4.jpg";
 
 const FarmGrades = () => {
   return (
-    <section id="farm-grades" className="bg-gray-50 text-gray-800 font-sans">
+    <section id="farm-grades" className="bg-gray-50 text-gray-800 font-sans w-full max-w-full overflow-hidden">
       
       {/* Hero Image Section */}
       <div className="relative">
@@ -15,25 +15,37 @@ const FarmGrades = () => {
           style={{ backgroundImage: `url(${heroImage})` }}
         >
           <div className="absolute inset-0 bg-black/40"></div>
+          
+          {/* Blinking Company Name at Top */}
+          <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-20">
+            <div className="bg-black/50 px-3 py-2 rounded-lg mx-auto inline-block max-w-[80vw]">
+              <h1 className="text-lg md:text-xl font-bold text-white animate-enhanced-pulse drop-shadow-lg">
+                SIVAJI <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">ENTERPRISES</span>
+              </h1>
+            </div>
+          </div>
+          
           <div className="relative z-10 h-full flex items-end justify-center px-4 text-center pb-20">
-            <div className="text-white max-w-2xl">
-              <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-4 tracking-wide drop-shadow-lg">
+            <div className="text-white max-w-2xl group cursor-pointer">
+              <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-4 tracking-wide drop-shadow-lg transition-all duration-700 group-hover:text-yellow-400 group-hover:scale-105 group-hover:drop-shadow-2xl animate-slide-up">
                 FROM GREEN TO GOLD
               </h1>
-              <p className="text-lg text-white/90 mb-4">
+              <p className="text-lg text-white/90 mb-4 transition-all duration-700 group-hover:text-yellow-300 group-hover:scale-105 animate-slide-up-delay">
                 Tobacco Curing Process
               </p>
-              <p className="text-base text-yellow-400 font-semibold drop-shadow-md">
+              <p className="text-base text-yellow-400 font-semibold drop-shadow-md transition-all duration-700 group-hover:text-yellow-300 group-hover:scale-105 animate-slide-up-delay-2">
                 Premium Quality Tobacco Products
               </p>
+              {/* Hover overlay effect */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg -m-4"></div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Content Container */}
-      <div className="container mx-auto px-6 py-16">
-        <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-14 space-y-14">
+      <div className="container mx-auto px-2 py-16 w-full max-w-full overflow-hidden">
+        <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 space-y-8">
           
           {/* Farm Grades – Black Soil Tobacco */}
           <div>
@@ -154,7 +166,7 @@ const FarmGrades = () => {
 
       {/* Farm Gallery Section */}
       <div className="bg-gradient-to-br from-green-50 to-yellow-50 py-16">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-2">
           <div className="max-w-6xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-12">

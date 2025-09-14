@@ -119,7 +119,7 @@ const TobaccoVarieties = () => {
 	];
 
 	return (
-    <section id="tobacco-varieties" className="bg-gradient-to-br from-gray-900 to-black">
+    <section id="tobacco-varieties" className="bg-gradient-to-br from-gray-900 to-black w-full max-w-full overflow-hidden">
       {/* Hero Image Section */}
       <div className="relative">
         <div 
@@ -127,6 +127,16 @@ const TobaccoVarieties = () => {
           style={{ backgroundImage: `url(${heroImage})` }}
         >
           <div className="absolute inset-0 bg-black/30"></div>
+          
+          {/* Blinking Company Name at Top */}
+          <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-20">
+            <div className="bg-black/50 px-3 py-2 rounded-lg mx-auto inline-block max-w-[80vw]">
+              <h1 className="text-lg md:text-xl font-bold text-white animate-enhanced-pulse drop-shadow-lg">
+                SIVAJI <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">ENTERPRISES</span>
+              </h1>
+            </div>
+          </div>
+          
           <div className="relative z-10 h-full flex items-end justify-center pb-20">
             <div className="text-center text-white group cursor-pointer">
               <h1 className="text-3xl md:text-4xl font-bold mb-4 animate-fade-in drop-shadow-lg transition-all duration-500 group-hover:text-yellow-400 group-hover:scale-105 group-hover:drop-shadow-2xl">
@@ -145,15 +155,15 @@ const TobaccoVarieties = () => {
 						</div>
 					</div>
 
-      <div className="container mx-auto px-4 py-24">
+      <div className="container mx-auto px-2 py-24 w-full max-w-full overflow-hidden">
 
         {/* Modern Horizontal Scrolling */}
-        <div className="relative">
+        <div className="relative max-w-full overflow-hidden">
           {/* Scroll Container */}
-          <div className="overflow-x-auto scrollbar-hide">
-            <div className="flex gap-8 pb-6" style={{ width: 'max-content' }}>
+          <div className="overflow-x-auto scrollbar-hide max-w-full">
+            <div className="flex gap-4 pb-6" style={{ width: 'max-content' }}>
               {varieties.map((variety, index) => (
-                <div key={index} className="flex-shrink-0 w-[600px]">
+                <div key={index} className="flex-shrink-0 w-[85vw] max-w-[500px]">
                   <div className="bg-white rounded-xl shadow-xl border-2 border-yellow-500 overflow-hidden">
                     {/* Header */}
                     <div className="bg-yellow-500 p-4">

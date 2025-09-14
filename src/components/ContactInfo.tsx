@@ -2,7 +2,7 @@ import heroImage from "@/assets/tobacco-field-2.jpg";
 
 const ContactInfo = () => {
   return (
-    <footer className="bg-gradient-to-br from-gray-900 to-black">
+    <footer className="bg-gradient-to-br from-gray-900 to-black w-full max-w-full overflow-hidden">
       {/* Hero Image Section */}
       <div className="relative">
         <div
@@ -13,51 +13,54 @@ const ContactInfo = () => {
           
           {/* Blinking Company Name at Top */}
           <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-20">
-            <div className="bg-yellow-500 px-6 py-3 rounded-lg shadow-lg">
-              <h1 className="text-2xl md:text-3xl font-bold text-white animate-pulse">
-                SIVAJI ENTERPRISES
+            <div className="bg-black/50 px-3 py-2 rounded-lg mx-auto inline-block max-w-[80vw]">
+              <h1 className="text-lg md:text-xl font-bold text-white animate-enhanced-pulse drop-shadow-lg">
+                SIVAJI <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">ENTERPRISES</span>
               </h1>
             </div>
           </div>
           
           <div className="relative z-10 h-full flex items-center justify-center">
-            <div className="text-center text-white">
+            <div className="text-center text-white group cursor-pointer">
               {/* Contact Icons */}
-              <div className="flex justify-center space-x-8 mb-6">
-                <div className="w-16 h-16 bg-gray-800 rounded-full border-2 border-white flex items-center justify-center">
-                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <div className="flex justify-center space-x-4 mb-6 animate-slide-up">
+                <div className="w-16 h-16 bg-gray-800 rounded-full border-2 border-white flex items-center justify-center hover:scale-110 hover:border-yellow-400 transition-all duration-500">
+                  <svg className="w-8 h-8 text-white hover:text-yellow-400 transition-colors duration-500" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                   </svg>
                 </div>
-                <div className="w-16 h-16 bg-gray-800 rounded-full border-2 border-white flex items-center justify-center">
-                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <div className="w-16 h-16 bg-gray-800 rounded-full border-2 border-white flex items-center justify-center hover:scale-110 hover:border-yellow-400 transition-all duration-500">
+                  <svg className="w-8 h-8 text-white hover:text-yellow-400 transition-colors duration-500" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                   </svg>
                 </div>
-                <div className="w-16 h-16 bg-gray-800 rounded-full border-2 border-white flex items-center justify-center">
-                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <div className="w-16 h-16 bg-gray-800 rounded-full border-2 border-white flex items-center justify-center hover:scale-110 hover:border-yellow-400 transition-all duration-500">
+                  <svg className="w-8 h-8 text-white hover:text-yellow-400 transition-colors duration-500" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                   </svg>
                 </div>
               </div>
 
               {/* Main Title */}
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in drop-shadow-lg">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in drop-shadow-lg transition-all duration-700 group-hover:text-yellow-400 group-hover:scale-105 group-hover:drop-shadow-2xl animate-slide-up-delay">
                 CONTACT
               </h1>
 
               {/* Tagline */}
-              <p className="text-lg md:text-xl font-semibold animate-fade-in drop-shadow-md">
+              <p className="text-lg md:text-xl font-semibold animate-fade-in drop-shadow-md transition-all duration-700 group-hover:text-yellow-300 group-hover:scale-105 animate-slide-up-delay-2">
                 LEADING TOBACCO GROWER, PACKER & EXPORTER
               </p>
+              
+              {/* Hover overlay effect */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg -m-4"></div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Contact Information Section */}
-      <div className="bg-gradient-to-br from-green-50 to-yellow-50 py-12">
-        <div className="container mx-auto px-4">
+      <div className="bg-gradient-to-br from-green-50 to-yellow-50 py-12 w-full max-w-full overflow-hidden">
+        <div className="container mx-auto px-2 w-full max-w-full">
           {/* Section Header */}
           <div className="text-center mb-10">
             <h2 className="text-4xl font-bold text-gray-800 mb-3">Get In Touch</h2>
@@ -122,8 +125,8 @@ const ContactInfo = () => {
       </div>
 
       {/* Contact Form Section */}
-      <div className="bg-gradient-to-br from-gray-50 to-white py-12">
-        <div className="container mx-auto px-4">
+      <div className="bg-gradient-to-br from-gray-50 to-white py-12 w-full max-w-full overflow-hidden">
+        <div className="container mx-auto px-2 w-full max-w-full">
           <div className="max-w-6xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-10">
@@ -133,9 +136,9 @@ const ContactInfo = () => {
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-8 items-start">
+            <div className="grid lg:grid-cols-2 gap-4 md:gap-6 lg:gap-8 items-start">
               {/* Contact Form */}
-              <div className="bg-white rounded-3xl shadow-2xl p-8 border border-gray-100">
+              <div className="bg-white rounded-3xl shadow-2xl p-4 md:p-6 lg:p-8 border border-gray-100">
                 <div className="mb-6">
                   <div className="flex items-center mb-4">
                     <div className="w-2 h-10 bg-gradient-to-b from-green-500 to-yellow-500 rounded-full mr-3"></div>
@@ -203,7 +206,7 @@ const ContactInfo = () => {
 
               {/* Additional Info */}
               <div className="space-y-6">
-                <div className="bg-gradient-to-br from-green-500 to-yellow-500 rounded-3xl p-6 text-white">
+                <div className="bg-gradient-to-br from-green-500 to-yellow-500 rounded-3xl p-4 md:p-6 text-white">
                   <h3 className="text-2xl font-bold mb-3">Why Choose Us?</h3>
                   <ul className="space-y-2">
                     <li className="flex items-center">
