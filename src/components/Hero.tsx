@@ -2,7 +2,7 @@ import heroImage from "@/assets/hero-tobacco-field.jpg";
 
 const Hero = () => {
   return (
-    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden pt-16 w-screen">
+    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden pt-20 w-screen">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -15,7 +15,7 @@ const Hero = () => {
       {/* Company Name - Better visibility */}
       <div className="absolute top-20 left-0 right-0 z-20 text-center">
         <div className="bg-black/50 px-3 py-2 rounded-lg mx-auto inline-block max-w-[80vw]">
-          <h1 className="text-lg md:text-xl font-bold text-white animate-enhanced-pulse drop-shadow-lg">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white animate-enhanced-pulse drop-shadow-lg font-montserrat">
             SIVAJI <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">ENTERPRISES</span>
           </h1>
         </div>
@@ -25,7 +25,7 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-2 text-center mt-48 w-screen overflow-hidden">
         <div className="max-w-3xl mx-auto w-full">
           {/* Subheading - Larger */}
-          <p className="text-base md:text-xl text-yellow-400 font-bold mb-6 animate-pulse drop-shadow-md">
+          <p className="text-xl md:text-2xl lg:text-3xl text-yellow-400 font-bold mb-6 animate-pulse drop-shadow-md">
             FROM PRODUCER TO GLOBAL EXPORTER OF TOBACCO
           </p>
 

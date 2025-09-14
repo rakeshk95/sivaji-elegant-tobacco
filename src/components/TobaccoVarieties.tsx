@@ -128,22 +128,21 @@ const TobaccoVarieties = () => {
         >
           <div className="absolute inset-0 bg-black/30"></div>
           
-          {/* Blinking Company Name at Top */}
-          <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-20">
-            <div className="bg-black/50 px-3 py-2 rounded-lg mx-auto inline-block max-w-[80vw]">
-              <h1 className="text-lg md:text-xl font-bold text-white animate-enhanced-pulse drop-shadow-lg">
-                SIVAJI <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">ENTERPRISES</span>
+          {/* Tobacco Varieties Heading at Top */}
+          <div className="absolute top-12 left-1/2 transform -translate-x-1/2 z-20">
+            <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 px-6 py-3 rounded-xl mx-auto inline-block animate-slide-up border-2 border-yellow-300 shadow-lg">
+              <h1 className="text-3xl md:text-4xl font-bold text-black drop-shadow-lg text-center">
+                TOBACCO VARIETIES
               </h1>
             </div>
           </div>
-          
-          <div className="relative z-10 h-full flex items-end justify-center pb-20">
-            <div className="text-center text-white group cursor-pointer">
-              <h1 className="text-3xl md:text-4xl font-bold mb-4 animate-fade-in drop-shadow-lg transition-all duration-500 group-hover:text-yellow-400 group-hover:scale-105 group-hover:drop-shadow-2xl">
-                OUR PRODUCTS
+
+          {/* Our Company Banner */}
+          <div className="absolute top-32 left-1/2 transform -translate-x-1/2 z-20">
+            <div className="bg-yellow-500 px-8 py-4 rounded-lg mx-auto inline-block animate-slide-up-delay border-4 border-yellow-600 shadow-2xl">
+              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black font-montserrat animate-enhanced-pulse">
+                OUR COMPANY
               </h1>
-              {/* Hover overlay effect */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg -m-4"></div>
             </div>
           </div>
 						</div>

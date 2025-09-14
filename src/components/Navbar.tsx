@@ -19,10 +19,10 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 bg-black border-b border-pink-200/20 z-50 w-screen">
       <div className="container mx-auto px-2 overflow-hidden max-w-full">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <div className="flex items-center justify-center w-40 h-20">
+            <div className="flex items-center justify-center w-64 h-20">
               <img 
                 src={logoImage} 
                 alt="Sivaji Enterprises Logo" 

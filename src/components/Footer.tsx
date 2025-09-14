@@ -3,13 +3,13 @@ const Footer = () => {
     <footer className="bg-slate-800 text-white py-12">
       <div className="container mx-auto px-4 text-center">
         {/* Main Heading */}
-        <h2 className="text-2xl font-bold mb-4 text-yellow-400">GET CONNECTED WITH SIVAJI ENTERPRISES</h2>
+        <h2 className="text-2xl font-bold mb-4 text-yellow-400 font-montserrat">GET CONNECTED WITH SIVAJI ENTERPRISES</h2>
         <div className="w-full h-px bg-yellow-500 mb-6"></div>
 
         {/* Contact Details */}
         <div className="mb-6">
           <p className="text-white mb-2 flex items-center justify-center gap-2">
-            <span className="text-yellow-400">📞</span> 8096112016
+            <span className="text-yellow-400">📞</span> +918096112016
           </p>
           <p className="text-white mb-2 flex items-center justify-center gap-2">
             <span className="text-yellow-400">✉️</span> shivajibusiness392@gmail.com

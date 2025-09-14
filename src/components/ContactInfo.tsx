@@ -14,7 +14,7 @@ const ContactInfo = () => {
           {/* Blinking Company Name at Top */}
           <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-20">
             <div className="bg-black/50 px-3 py-2 rounded-lg mx-auto inline-block max-w-[80vw]">
-              <h1 className="text-lg md:text-xl font-bold text-white animate-enhanced-pulse drop-shadow-lg">
+              <h1 className="text-lg md:text-xl font-bold text-white animate-enhanced-pulse drop-shadow-lg font-montserrat">
                 SIVAJI <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">ENTERPRISES</span>
               </h1>
             </div>
@@ -100,7 +100,7 @@ const ContactInfo = () => {
                 <h3 className="text-xl font-bold text-gray-800">Phone Number</h3>
               </div>
               <div className="text-gray-600">
-                <p className="text-lg font-semibold text-gray-800">8096112016</p>
+                <p className="text-lg font-semibold text-gray-800">+918096112016</p>
                 <p className="text-sm mt-1">Available 24/7 for your inquiries</p>
               </div>
             </div>
@@ -274,7 +274,7 @@ const ContactInfo = () => {
             SIVAJI ENTERPRISES, MUKTHINUTHALAPADU, ONGOLE, ANDHRA PRADESH, 523262
           </p>
           <p className="text-white mb-4">
-            8096112016, shivajibusiness392@gmail.com
+           +918096112016, shivajibusiness392@gmail.com
           </p>
 
           <div className="w-full h-px bg-yellow-500 mb-6"></div>
