@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Leaf } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import logoImage from "@/assets/WhatsApp Image 2025-09-14 at 09.02.03_452cd47f.jpg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,6 +12,7 @@ const Navbar = () => {
     { name: "HOME", href: "/" },
     { name: "ABOUT US", href: "/about" },
     { name: "TOBACCO VARIETIES", href: "/varieties" },
+    { name: "FARM GRADES", href: "/farm-grades" },
     { name: "CONTACT", href: "/contact" },
   ];
 
@@ -20,15 +22,18 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <div className="flex items-center justify-center w-8 h-8 bg-yellow-500 rounded-lg">
-              <Leaf className="w-5 h-5 text-yellow-600" />
+            <div className="flex items-center justify-center w-20 h-16">
+              <img 
+                src={logoImage} 
+                alt="Sivaji Enterprises Logo" 
+                className="w-full h-full object-contain"
+              />
             </div>
             <div>
-              <h1 className="text-lg font-bold text-white mb-0">SIVAJI</h1>
+              <h1 className="text-lg font-bold text-white mb-0">SIVAJI ENTERPRISES</h1>
               <div className="flex flex-col">
-                <span className="text-sm font-bold text-white -mt-1">ENTERPRISES</span>
                 <div className="w-full h-px bg-white mt-0.5"></div>
-                <span className="text-xs text-white/80 mt-0.5">Tobacco Packers & Exporters</span>
+                <span className="text-xs text-white/80 mt-0.5">Trusted Since 1990</span>
               </div>
             </div>
           </Link>

@@ -1,4 +1,4 @@
-import heroImage from "@/assets/metallic-3d-image-premium-expensive-260nw-2633654231.jpg";
+import heroImage from "@/assets/tobacco-field-2.jpg";
 
 const ContactInfo = () => {
   return (
@@ -10,6 +10,16 @@ const ContactInfo = () => {
           style={{ backgroundImage: `url(${heroImage})` }}
         >
           <div className="absolute inset-0 bg-black/30"></div>
+          
+          {/* Blinking Company Name at Top */}
+          <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-20">
+            <div className="bg-yellow-500 px-6 py-3 rounded-lg shadow-lg">
+              <h1 className="text-2xl md:text-3xl font-bold text-white animate-pulse">
+                SIVAJI ENTERPRISES
+              </h1>
+            </div>
+          </div>
+          
           <div className="relative z-10 h-full flex items-center justify-center">
             <div className="text-center text-white">
               {/* Contact Icons */}
@@ -36,126 +46,215 @@ const ContactInfo = () => {
                 CONTACT
               </h1>
 
-              {/* Company Banner */}
-              <div className="bg-yellow-500 px-8 py-4 rounded-lg mb-4 inline-block">
-                <h2 className="text-2xl md:text-3xl font-bold text-white">
-                  SIVAJI ENTERPRISES
-                </h2>
-              </div>
-
               {/* Tagline */}
               <p className="text-lg md:text-xl font-semibold animate-fade-in drop-shadow-md">
-                PRODUCT EXCELLENCE, DELIVERED 
+                LEADING TOBACCO GROWER, PACKER & EXPORTER
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Contact Cards */}
-      <div className="bg-white py-16">
+      {/* Contact Information Section */}
+      <div className="bg-gradient-to-br from-green-50 to-yellow-50 py-12">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
+          {/* Section Header */}
+          <div className="text-center mb-10">
+            <h2 className="text-4xl font-bold text-gray-800 mb-3">Get In Touch</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Connect with Sivaji Enterprises for premium tobacco products and exceptional service
+            </p>
+          </div>
+
+          {/* Contact Cards Grid */}
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 mb-10">
             {/* Office Address Card */}
-            <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-6 text-center">
-              <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-6 h-6 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                </svg>
+            <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 p-6 border border-gray-100 hover:border-green-300">
+              <div className="flex items-center mb-4">
+                <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-800">Office Address</h3>
               </div>
-              <h3 className="text-lg font-bold text-gray-800 mb-3">Office Address</h3>
-              <div className="text-gray-600 text-sm space-y-1">
-                <p>SIVAJI ENTERPRISES</p>
+              <div className="text-gray-600 space-y-2">
+                <p className="font-semibold text-gray-800">SIVAJI ENTERPRISES</p>
                 <p>MUKTHINUTHALAPADU</p>
                 <p>ONGOLE, ANDHRA PRADESH</p>
-                <p>523262</p>
+                <p className="font-semibold">523262</p>
               </div>
             </div>
 
             {/* Phone Number Card */}
-            <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-6 text-center">
-              <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-6 h-6 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                </svg>
+            <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 p-6 border border-gray-100 hover:border-yellow-300">
+              <div className="flex items-center mb-4">
+                <div className="w-14 h-14 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-800">Phone Number</h3>
               </div>
-              <h3 className="text-lg font-bold text-gray-800 mb-3">Phone Number</h3>
-              <p className="text-gray-600 text-sm">8096112016</p>
+              <div className="text-gray-600">
+                <p className="text-lg font-semibold text-gray-800">8096112016</p>
+                <p className="text-sm mt-1">Available 24/7 for your inquiries</p>
+              </div>
             </div>
 
             {/* E-Mail Card */}
-            <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-6 text-center">
-              <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-6 h-6 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                </svg>
+            <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 p-6 border border-gray-100 hover:border-blue-300 md:col-span-2 lg:col-span-1">
+              <div className="flex items-center mb-4">
+                <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-800">E-Mail</h3>
               </div>
-              <h3 className="text-lg font-bold text-gray-800 mb-3">E Mail</h3>
-              <p className="text-gray-600 text-sm">shivajibusiness392@gmail.com</p>
+              <div className="text-gray-600">
+                <p className="text-lg font-semibold text-gray-800">shivajibusiness392@gmail.com</p>
+                <p className="text-sm mt-1">We respond within 24 hours</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Contact Form Section */}
-      <div className="bg-white py-16">
+      <div className="bg-gradient-to-br from-gray-50 to-white py-12">
         <div className="container mx-auto px-4">
-          {/* Contact Form */}
-          <div className="max-w-4xl mx-auto mb-16">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">Contact Us</h2>
-              <p className="text-lg text-gray-600">
-                We welcome your response and look forward to hearing from you
+          <div className="max-w-6xl mx-auto">
+            {/* Section Header */}
+            <div className="text-center mb-10">
+              <h2 className="text-4xl font-bold text-gray-800 mb-3">Send Us a Message</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                We welcome your response and look forward to hearing from you. Get in touch for inquiries about our premium tobacco products.
               </p>
             </div>
 
-            <div className="max-w-2xl mx-auto">
-              <div className="bg-white border-2 border-yellow-500 rounded-xl p-8 shadow-lg">
-                <div className="flex items-center mb-8">
-                  <div className="w-1 h-8 bg-yellow-500 mr-4"></div>
-                  <h3 className="text-2xl font-bold text-gray-800">Get in Touch with us</h3>
+            <div className="grid lg:grid-cols-2 gap-8 items-start">
+              {/* Contact Form */}
+              <div className="bg-white rounded-3xl shadow-2xl p-8 border border-gray-100">
+                <div className="mb-6">
+                  <div className="flex items-center mb-4">
+                    <div className="w-2 h-10 bg-gradient-to-b from-green-500 to-yellow-500 rounded-full mr-3"></div>
+                    <h3 className="text-2xl font-bold text-gray-800">Get in Touch</h3>
+                  </div>
+                  <p className="text-gray-600">Fill out the form below and we'll get back to you as soon as possible.</p>
                 </div>
 
-                <form className="space-y-6">
+                <form className="space-y-4">
                   <div className="grid md:grid-cols-2 gap-4">
-                    <input
-                      type="text"
-                      placeholder="Enter Your Name"
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors"
-                    />
-                    <input
-                      type="email"
-                      placeholder="Enter Your Mail Id"
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors"
-                    />
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 mb-2">Full Name</label>
+                      <input
+                        type="text"
+                        placeholder="Enter Your Name"
+                        className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all duration-300 bg-gray-50 hover:bg-white"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 mb-2">Email Address</label>
+                      <input
+                        type="email"
+                        placeholder="Enter Your Mail Id"
+                        className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all duration-300 bg-gray-50 hover:bg-white"
+                      />
+                    </div>
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-4">
-                    <input
-                      type="tel"
-                      placeholder="Enter Your Mobile Number"
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors"
-                    />
-                    <input
-                      type="text"
-                      placeholder="Enter Your Subject"
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors"
-                    />
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
+                      <input
+                        type="tel"
+                        placeholder="Enter Your Mobile Number"
+                        className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all duration-300 bg-gray-50 hover:bg-white"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 mb-2">Subject</label>
+                      <input
+                        type="text"
+                        placeholder="Enter Your Subject"
+                        className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all duration-300 bg-gray-50 hover:bg-white"
+                      />
+                    </div>
                   </div>
 
-                  <textarea
-                    rows={4}
-                    placeholder="Your Message"
-                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors resize-none"
-                  ></textarea>
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">Message</label>
+                    <textarea
+                      rows={5}
+                      placeholder="Tell us about your requirements..."
+                      className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all duration-300 resize-none bg-gray-50 hover:bg-white"
+                    ></textarea>
+                  </div>
 
                   <button
                     type="submit"
-                    className="bg-yellow-500 hover:bg-yellow-600 text-gray-800 font-bold py-3 px-8 rounded-lg transition-colors duration-200"
+                    className="w-full bg-gradient-to-r from-green-500 to-yellow-500 hover:from-green-600 hover:to-yellow-600 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                   >
-                    Submit
+                    Send Message
                   </button>
                 </form>
+              </div>
+
+              {/* Additional Info */}
+              <div className="space-y-6">
+                <div className="bg-gradient-to-br from-green-500 to-yellow-500 rounded-3xl p-6 text-white">
+                  <h3 className="text-2xl font-bold mb-3">Why Choose Us?</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-center">
+                      <svg className="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                      </svg>
+                      Premium Quality Tobacco Products
+                    </li>
+                    <li className="flex items-center">
+                      <svg className="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                      </svg>
+                      Fast and Reliable Delivery
+                    </li>
+                    <li className="flex items-center">
+                      <svg className="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                      </svg>
+                      Expert Customer Support
+                    </li>
+                    <li className="flex items-center">
+                      <svg className="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                      </svg>
+                      Competitive Pricing
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100">
+                  <h3 className="text-xl font-bold text-gray-800 mb-3">Business Hours</h3>
+                  <div className="space-y-1 text-gray-600">
+                    <div className="flex justify-between">
+                      <span>Monday - Friday</span>
+                      <span className="font-semibold">9:00 AM - 6:00 PM</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Saturday</span>
+                      <span className="font-semibold">9:00 AM - 4:00 PM</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Sunday</span>
+                      <span className="font-semibold">Closed</span>
+                    </div>
+                  </div>
+                  <div className="mt-4 p-3 bg-green-50 rounded-xl">
+                    <p className="text-sm text-green-700 font-semibold">
+                      📞 Emergency inquiries available 24/7
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

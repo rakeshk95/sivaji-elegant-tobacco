@@ -132,12 +132,10 @@ const TobaccoVarieties = () => {
               <h1 className="text-3xl md:text-4xl font-bold mb-4 animate-fade-in drop-shadow-lg">
                 OUR PRODUCTS
               </h1>
-              <div className="bg-yellow-500 px-8 py-4 rounded-lg mb-4 inline-block">
-                <h2 className="text-2xl md:text-3xl font-bold text-white">
-                  TOBACCO VARIETIES
-					</h2>
-				</div>
-              <p className="text-lg md:text-xl font-semibold animate-fade-in drop-shadow-md">
+              <p className="text-xl text-white/90 mb-4">
+                TOBACCO VARIETIES
+              </p>
+              <p className="text-lg text-yellow-400 font-semibold animate-fade-in drop-shadow-md">
                 PREMIUM QUALITY TOBACCO PRODUCTS
               </p>
             </div>

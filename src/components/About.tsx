@@ -12,17 +12,12 @@ const About = () => {
           style={{ backgroundImage: `url(${heroImage})` }}
         >
           <div className="absolute inset-0 bg-black/30"></div>
-            <div className="relative z-10 h-full flex items-center justify-center">
+            <div className="relative z-10 h-full flex items-end justify-center pb-20">
               <div className="text-center text-white">
-                <h1 className="text-3xl md:text-4xl font-bold mb-4 animate-fade-in drop-shadow-lg">
-                  ABOUT
-                </h1>
-                <div className="bg-yellow-500 px-8 py-4 rounded-lg mb-4 inline-block">
-                  <h2 className="text-2xl md:text-3xl font-bold text-white">
-                    SIVAJI ENTERPRISES
-                  </h2>
-                </div>
-                <p className="text-lg md:text-xl font-semibold animate-fade-in drop-shadow-md">
+                <p className="text-2xl md:text-4xl font-semibold animate-fade-in drop-shadow-md">
+                  <span className="text-yellow-400 font-bold">PRODUCER TO GLOBAL EXPORTER OF TOBACCO</span>
+                </p>
+                <p className="text-xl md:text-2xl font-medium mt-4 animate-fade-in drop-shadow-md">
                   PRODUCT EXCELLENCE, DELIVERED
                 </p>
               </div>
@@ -58,25 +53,7 @@ const About = () => {
                   <div className="relative inline-block mb-4">
                     <img
                       src={sivajiImage}
-                      alt="Sivaji - CEO & Founder"
-                      className="w-full max-w-xs h-auto rounded-xl shadow-2xl border-4 border-yellow-500"
-                    />
-                    <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2">
-                      <div className="bg-yellow-500 text-black px-3 py-1 rounded-full text-xs font-bold">
-                        CEO & FOUNDER
-                      </div>
-                    </div>
-                  </div>
-                  <h4 className="text-lg font-bold text-gray-900 mb-1">SIVAJI</h4>
-                  <p className="text-yellow-600 font-semibold text-sm">Managing Director</p>
-                </div>
-
-                {/* Father */}
-                <div className="text-center">
-                  <div className="relative inline-block mb-4">
-                    <img
-                      src={fatherImage}
-                      alt="Business Director"
+                      alt="Rayapati Shivaji - Business Director"
                       className="w-full max-w-xs h-auto rounded-xl shadow-2xl border-4 border-yellow-500"
                     />
                     <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2">
@@ -85,8 +62,24 @@ const About = () => {
                       </div>
                     </div>
                   </div>
-                  <h4 className="text-lg font-bold text-gray-900 mb-1">SIVAJI FATHER</h4>
-                  <p className="text-yellow-600 font-semibold text-sm">Industry Expert</p>
+                  <h4 className="text-lg font-bold text-gray-900 mb-1">RAYAPATI SHIVAJI</h4>
+                </div>
+
+                {/* Father */}
+                <div className="text-center">
+                  <div className="relative inline-block mb-4">
+                    <img
+                      src={fatherImage}
+                      alt="Rayapati Venkateswarlu - Founder"
+                      className="w-full max-w-xs h-auto rounded-xl shadow-2xl border-4 border-yellow-500"
+                    />
+                    <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2">
+                      <div className="bg-yellow-500 text-black px-3 py-1 rounded-full text-xs font-bold">
+                        FOUNDER
+                      </div>
+                    </div>
+                  </div>
+                  <h4 className="text-lg font-bold text-gray-900 mb-1">RAYAPATI VENKATESWARLU</h4>
                 </div>
               </div>
             </div>

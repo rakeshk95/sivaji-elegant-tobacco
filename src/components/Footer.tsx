@@ -3,16 +3,19 @@ const Footer = () => {
     <footer className="bg-slate-800 text-white py-12">
       <div className="container mx-auto px-4 text-center">
         {/* Main Heading */}
-        <h2 className="text-2xl font-bold mb-4 text-yellow-400">GET IN TOUCH WITH US</h2>
+        <h2 className="text-2xl font-bold mb-4 text-yellow-400">GET CONNECTED WITH SIVAJI ENTERPRISES</h2>
         <div className="w-full h-px bg-yellow-500 mb-6"></div>
 
         {/* Contact Details */}
         <div className="mb-6">
-          <p className="text-white mb-2">
-            SIVAJI ENTERPRISES, MUKTHINUTHALAPADU, ONGOLE, ANDHRA PRADESH, 523262
+          <p className="text-white mb-2 flex items-center justify-center gap-2">
+            <span className="text-yellow-400">📞</span> 8096112016
+          </p>
+          <p className="text-white mb-2 flex items-center justify-center gap-2">
+            <span className="text-yellow-400">✉️</span> shivajibusiness392@gmail.com
           </p>
           <p className="text-white mb-4">
-            8096112016, shivajibusiness392@gmail.com
+            <span className="text-yellow-400">📍</span> Address: 1-9, MUKTHINUTHALAPADU, ONGOLE, ANDHRA PRADESH, INDIA
           </p>
         </div>
 
@@ -21,13 +24,13 @@ const Footer = () => {
         {/* Legal Text */}
         <div className="max-w-4xl mx-auto mb-6">
           <p className="text-white text-sm leading-relaxed">
-            You accept these terms of service, all applicable laws and regulations, and the responsibility for adhering to any local laws that may be in force by accessing the website at <strong className="text-yellow-400">sivajienterprises.com</strong>. You are not permitted to use or access this website if you disagree with any of these terms. The website simply uses the photographs for representational purposes. This website's content is shielded by relevant copyright and trademark laws.
+            Use of this website (<strong className="text-yellow-400">sivajienterprises.com</strong>) is subject to compliance with all applicable laws, regulations, and the terms outlined herein. If you do not agree with these terms, you may not access or use this site. Images are for illustrative purposes only. All content is safeguarded by copyright and trademark protections.
           </p>
         </div>
 
         {/* Copyright */}
         <div className="text-yellow-400 text-sm">
-          All Rights Reserved © 2024 sivajienterprises.com
+          © 2025 Sivaji Enterprises. All Rights Reserved.
         </div>
       </div>
     </footer>
