@@ -25,12 +25,12 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-2 text-center mt-48 w-screen overflow-hidden">
         <div className="max-w-3xl mx-auto w-full">
           {/* Subheading - Larger */}
-          <p className="text-xl md:text-2xl lg:text-3xl text-yellow-400 font-bold mb-6 animate-pulse drop-shadow-md">
-            FROM PRODUCER TO GLOBAL EXPORTER OF TOBACCO
+          <p className="text-xl md:text-2xl lg:text-3xl text-yellow-400 font-normal mb-6 drop-shadow-md">
+            FROM <span className="text-2xl md:text-3xl lg:text-4xl bg-gradient-to-r from-yellow-300 to-yellow-500 bg-clip-text text-transparent font-black animate-enhanced-pulse">PRODUCER TO GLOBAL EXPORTER</span> OF TOBACCO
           </p>
 
           {/* Description */}
-          <p className="text-base md:text-lg text-white font-medium mb-8 max-w-2xl mx-auto leading-relaxed animate-fade-in drop-shadow-md">
+          <p className="text-lg md:text-xl lg:text-2xl text-white font-medium mb-8 max-w-2xl mx-auto leading-relaxed animate-fade-in drop-shadow-md">
             LEADING TOBACCO GROWER, PACKER & EXPORTER
           </p>
         </div>
