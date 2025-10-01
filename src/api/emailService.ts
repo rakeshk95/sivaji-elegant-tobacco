@@ -14,10 +14,10 @@ export interface EmailResponse {
 
 // EmailJS configuration - This connects to your Gmail SMTP
 const EMAILJS_CONFIG = {
-  serviceId: 'service_xyiz', // Your EmailJS service connected to Gmail SMTP
-  templateId: 'template_yclq', // Your email template
-  userId: 'ahdp_undh', // Your EmailJS user ID
-  toEmail: 'shivajiwebsitemail@gmail.com' // Your Gmail address
+  serviceId: 'service_hljn15i', // Your EmailJS service connected to Gmail SMTP
+  templateId: 'template_zve799k', // Your email template
+  userId: 'jPZ_unrUx5cVeiYMw', // Your EmailJS Public Key
+  toEmail: 'shivajibusiness392@gmail.com' // Your business email address
 };
 
 // Using EmailJS (client-side email service)
