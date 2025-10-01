@@ -129,22 +129,14 @@ const TobaccoVarieties = () => {
           <div className="absolute inset-0 bg-black/30"></div>
           
           {/* Tobacco Varieties Heading at Top */}
-          <div className="absolute top-12 left-1/2 transform -translate-x-1/2 z-20">
-            <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 px-6 py-3 rounded-xl mx-auto inline-block animate-slide-up border-2 border-yellow-300 shadow-lg">
-              <h1 className="text-3xl md:text-4xl font-bold text-black drop-shadow-lg text-center">
+          <div className="absolute top-8 md:top-12 left-1/2 transform -translate-x-1/2 z-20 px-4">
+            <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 px-4 md:px-6 py-2 md:py-3 rounded-xl mx-auto inline-block animate-slide-up border-2 border-yellow-300 shadow-lg max-w-[90vw]">
+              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black drop-shadow-lg text-center">
                 TOBACCO VARIETIES
               </h1>
             </div>
           </div>
 
-          {/* Our Company Banner */}
-          <div className="absolute top-32 left-1/2 transform -translate-x-1/2 z-20">
-            <div className="bg-yellow-500 px-8 py-4 rounded-lg mx-auto inline-block animate-slide-up-delay border-4 border-yellow-600 shadow-2xl">
-              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black font-montserrat animate-enhanced-pulse">
-                OUR COMPANY
-              </h1>
-            </div>
-          </div>
 						</div>
 					</div>
 
@@ -154,40 +146,40 @@ const TobaccoVarieties = () => {
         <div className="relative max-w-full overflow-hidden">
           {/* Scroll Container */}
           <div className="overflow-x-auto scrollbar-hide max-w-full">
-            <div className="flex gap-4 pb-6" style={{ width: 'max-content' }}>
+            <div className="flex gap-3 md:gap-4 pb-6" style={{ width: 'max-content' }}>
               {varieties.map((variety, index) => (
-                <div key={index} className="flex-shrink-0 w-[85vw] max-w-[500px]">
+                <div key={index} className="flex-shrink-0 w-[90vw] sm:w-[85vw] md:w-[80vw] lg:w-[500px] max-w-[500px]">
                   <div className="bg-white rounded-xl shadow-xl border-2 border-yellow-500 overflow-hidden">
                     {/* Header */}
-                    <div className="bg-yellow-500 p-4">
-                      <h3 className="text-lg font-bold text-white text-center">
+                    <div className="bg-yellow-500 p-3 md:p-4">
+                      <h3 className="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-white text-center leading-tight break-words">
                         {variety.name}
                       </h3>
                     </div>
                     
                     {/* Content */}
-                    <div className="p-6">
-                      <div className="grid lg:grid-cols-3 gap-6">
+                    <div className="p-3 md:p-6">
+                      <div className="grid lg:grid-cols-3 gap-3 md:gap-6">
                         {/* Left Column - Data */}
                         <div className="lg:col-span-2">
                           <div className="space-y-4">
                             {/* Planting & Marketing */}
-                            <div className="border border-yellow-500 rounded-lg overflow-hidden h-24">
+                            <div className="border border-yellow-500 rounded-lg overflow-hidden h-20 md:h-24">
                               <table className="w-full h-full">
                                 <tbody>
                                   <tr className="border-b border-yellow-500 h-1/2">
-                                    <td className="bg-yellow-50 px-4 py-2 font-bold text-gray-900 border-r border-yellow-500 w-1/3 text-sm">
+                                    <td className="bg-yellow-50 px-2 md:px-4 py-1 md:py-2 font-bold text-gray-900 border-r border-yellow-500 w-1/3 text-xs md:text-sm">
                                       PLANTING
                                     </td>
-                                    <td className="px-4 py-2 text-gray-700 text-sm">
+                                    <td className="px-2 md:px-4 py-1 md:py-2 text-gray-700 text-xs md:text-sm break-words">
                                       {variety.planting}
                                     </td>
                                   </tr>
                                   <tr className="h-1/2">
-                                    <td className="bg-yellow-50 px-4 py-2 font-bold text-gray-900 border-r border-yellow-500 text-sm">
+                                    <td className="bg-yellow-50 px-2 md:px-4 py-1 md:py-2 font-bold text-gray-900 border-r border-yellow-500 text-xs md:text-sm">
                                       MARKETING
                                     </td>
-                                    <td className="px-4 py-2 text-gray-700 text-sm">
+                                    <td className="px-2 md:px-4 py-1 md:py-2 text-gray-700 text-xs md:text-sm break-words">
                                       {variety.marketing}
                                     </td>
                                   </tr>
@@ -196,44 +188,44 @@ const TobaccoVarieties = () => {
 							</div>
 
 									{/* Physical Characteristics */}
-                            <div className="border border-yellow-500 rounded-lg overflow-hidden h-32">
-                              <div className="bg-yellow-50 px-4 py-2 border-b border-yellow-500 h-8">
-                                <h4 className="font-bold text-gray-900 text-center text-sm">PHYSICAL CHARACTERISTICS</h4>
+                            <div className="border border-yellow-500 rounded-lg overflow-hidden h-28 md:h-32">
+                              <div className="bg-yellow-50 px-2 md:px-4 py-1 md:py-2 border-b border-yellow-500 h-6 md:h-8">
+                                <h4 className="font-bold text-gray-900 text-center text-xs md:text-sm">PHYSICAL CHARACTERISTICS</h4>
 										</div>
-                              <table className="w-full h-24">
+                              <table className="w-full h-22 md:h-24">
                                 <tbody>
                                   <tr className="border-b border-yellow-500 h-1/4">
-                                    <td className="bg-yellow-50 px-4 py-1 font-bold text-gray-900 border-r border-yellow-500 text-xs">
+                                    <td className="bg-yellow-50 px-2 md:px-4 py-1 font-bold text-gray-900 border-r border-yellow-500 text-xs">
                                       Color
                                     </td>
-                                    <td className="px-4 py-1 text-gray-700 text-xs">
+                                    <td className="px-2 md:px-4 py-1 text-gray-700 text-xs break-words">
                                       {variety.physical.color}
                                     </td>
                                   </tr>
                                   <tr className="border-b border-yellow-500 h-1/4">
-                                    <td className="bg-yellow-50 px-4 py-1 font-bold text-gray-900 border-r border-yellow-500 text-xs">
+                                    <td className="bg-yellow-50 px-2 md:px-4 py-1 font-bold text-gray-900 border-r border-yellow-500 text-xs">
                                       Leaf Size
                                     </td>
-                                    <td className="px-4 py-1 text-gray-700 text-xs">
+                                    <td className="px-2 md:px-4 py-1 text-gray-700 text-xs break-words">
                                       {variety.physical.leafSize}
                                     </td>
                                   </tr>
                                   {variety.physical.poreVolume !== "N/A" && (
                                     <tr className="border-b border-yellow-500 h-1/4">
-                                      <td className="bg-yellow-50 px-2 py-1 font-bold text-gray-900 border-r border-yellow-500 text-xs">
+                                      <td className="bg-yellow-50 px-1 md:px-2 py-1 font-bold text-gray-900 border-r border-yellow-500 text-xs">
                                         Pore Vol.(MI/Gm)
                                       </td>
-                                      <td className="px-2 py-1 text-gray-700 text-xs">
+                                      <td className="px-1 md:px-2 py-1 text-gray-700 text-xs break-words">
                                         {variety.physical.poreVolume}
                                       </td>
                                     </tr>
                                   )}
                                   {variety.physical.fillingValue !== "N/A" && (
                                     <tr className="h-1/4">
-                                      <td className="bg-yellow-50 px-2 py-1 font-bold text-gray-900 border-r border-yellow-500 text-xs">
+                                      <td className="bg-yellow-50 px-1 md:px-2 py-1 font-bold text-gray-900 border-r border-yellow-500 text-xs">
                                         Fill Value(CC/GM)
                                       </td>
-                                      <td className="px-2 py-1 text-gray-700 text-xs">
+                                      <td className="px-1 md:px-2 py-1 text-gray-700 text-xs break-words">
                                         {variety.physical.fillingValue}
                                       </td>
                                     </tr>
@@ -243,25 +235,25 @@ const TobaccoVarieties = () => {
 									</div>
 
 									{/* Chemical Characteristics */}
-                            <div className="border border-yellow-500 rounded-lg overflow-hidden h-24">
-                              <div className="bg-yellow-50 px-4 py-2 border-b border-yellow-500 h-8">
-                                <h4 className="font-bold text-gray-900 text-center text-sm">CHEMICAL CHARACTERISTICS</h4>
+                            <div className="border border-yellow-500 rounded-lg overflow-hidden h-20 md:h-24">
+                              <div className="bg-yellow-50 px-2 md:px-4 py-1 md:py-2 border-b border-yellow-500 h-6 md:h-8">
+                                <h4 className="font-bold text-gray-900 text-center text-xs md:text-sm">CHEMICAL CHARACTERISTICS</h4>
                               </div>
-                              <table className="w-full h-16">
+                              <table className="w-full h-14 md:h-16">
                                 <tbody>
                                   <tr className="border-b border-yellow-500 h-1/2">
-                                    <td className="bg-yellow-50 px-4 py-1 font-bold text-gray-900 border-r border-yellow-500 text-xs">
+                                    <td className="bg-yellow-50 px-2 md:px-4 py-1 font-bold text-gray-900 border-r border-yellow-500 text-xs">
                                       Nicotine(%)
                                     </td>
-                                    <td className="px-4 py-1 text-gray-700 text-xs">
+                                    <td className="px-2 md:px-4 py-1 text-gray-700 text-xs break-words">
                                       {variety.chemical.nicotine}
                                     </td>
                                   </tr>
                                   <tr className="h-1/2">
-                                    <td className="bg-yellow-50 px-4 py-1 font-bold text-gray-900 border-r border-yellow-500 text-xs">
+                                    <td className="bg-yellow-50 px-2 md:px-4 py-1 font-bold text-gray-900 border-r border-yellow-500 text-xs">
                                       Reducing Sugars(%)
                                     </td>
-                                    <td className="px-4 py-1 text-gray-700 text-xs">
+                                    <td className="px-2 md:px-4 py-1 text-gray-700 text-xs break-words">
                                       {variety.chemical.reducingSugars}
                                     </td>
                                   </tr>
@@ -273,7 +265,7 @@ const TobaccoVarieties = () => {
 
                          {/* Right Column - Tobacco Image */}
                          <div className="flex justify-center items-center">
-                           <div className="w-48 h-64 rounded-lg border-2 border-yellow-500 overflow-hidden">
+                           <div className="w-32 h-40 sm:w-40 sm:h-48 md:w-48 md:h-64 rounded-lg border-2 border-yellow-500 overflow-hidden">
                              <img
                                src={variety.imagePath}
                                alt={`${variety.name} tobacco leaves`}
