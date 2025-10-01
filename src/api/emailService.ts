@@ -26,18 +26,23 @@ export const sendEmailWithEmailJS = async (formData: ContactFormData): Promise<E
     // Dynamic import to avoid SSR issues
     const emailjs = await import('@emailjs/browser');
     
+    const templateParams = {
+      from_name: formData.fullName,
+      from_email: formData.email,
+      phone: formData.phone,
+      subject: formData.subject,
+      message: formData.message,
+      to_email: EMAILJS_CONFIG.toEmail,
+      reply_to: formData.email,
+    };
+    
+    console.log('Sending email with params:', templateParams);
+    console.log('EmailJS Config:', EMAILJS_CONFIG);
+    
     const result = await emailjs.default.send(
       EMAILJS_CONFIG.serviceId,
       EMAILJS_CONFIG.templateId,
-      {
-        from_name: formData.fullName,
-        from_email: formData.email,
-        phone: formData.phone,
-        subject: formData.subject,
-        message: formData.message,
-        to_email: EMAILJS_CONFIG.toEmail,
-        reply_to: formData.email,
-      },
+      templateParams,
       EMAILJS_CONFIG.userId
     );
     
