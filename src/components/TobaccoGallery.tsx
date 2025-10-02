@@ -31,11 +31,11 @@ const TobaccoGallery = () => {
     <section id="gallery" className="py-24 bg-black">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+        <div className="text-center mb-16 animate-slide-up">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 hover-glow">
             INDIAN TOBACCO
           </h2>
-          <p className="text-xl text-white/90 mb-8">
+          <p className="text-xl text-white/90 mb-8 animate-fade-in">
             Cultivating the Finest Indian Tobacco
           </p>
         </div>
@@ -44,8 +44,8 @@ const TobaccoGallery = () => {
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-2 gap-8 md:gap-12">
             {images.map((image, index) => (
-              <div key={index} className="relative group flex justify-center">
-                <div className="relative w-full max-w-lg h-72 overflow-hidden rounded-xl border-4 border-yellow-500 bg-black p-2 shadow-2xl transition-all duration-500 group-hover:border-yellow-300 group-hover:shadow-yellow-500/25 group-hover:shadow-2xl" style={{borderColor: '#eab308'}}>
+              <div key={index} className="relative group flex justify-center animate-scale-in" style={{ animationDelay: `${index * 0.2}s` }}>
+                <div className="relative w-full max-w-lg h-72 overflow-hidden rounded-xl border-4 border-yellow-500 bg-black p-2 shadow-2xl transition-all duration-500 group-hover:border-yellow-300 group-hover:shadow-yellow-500/25 group-hover:shadow-2xl hover-scale" style={{borderColor: '#eab308'}}>
                   <img
                     src={image.src}
                     alt={image.alt}

@@ -128,14 +128,6 @@ const TobaccoVarieties = () => {
         >
           <div className="absolute inset-0 bg-black/30"></div>
           
-          {/* Tobacco Varieties Heading at Top */}
-          <div className="absolute top-8 md:top-12 left-1/2 transform -translate-x-1/2 z-20 px-4">
-            <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 px-4 md:px-6 py-2 md:py-3 rounded-xl mx-auto inline-block animate-slide-up border-2 border-yellow-300 shadow-lg max-w-[90vw]">
-              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black drop-shadow-lg text-center">
-                TOBACCO VARIETIES
-              </h1>
-            </div>
-          </div>
 
 						</div>
 					</div>
@@ -188,50 +180,48 @@ const TobaccoVarieties = () => {
 							</div>
 
 									{/* Physical Characteristics */}
-                            <div className="border border-yellow-500 rounded-lg overflow-hidden h-28 md:h-32">
+                            <div className="border border-yellow-500 rounded-lg overflow-hidden min-h-32 md:min-h-36">
                               <div className="bg-yellow-50 px-2 md:px-4 py-1 md:py-2 border-b border-yellow-500 h-6 md:h-8">
                                 <h4 className="font-bold text-gray-900 text-center text-xs md:text-sm">PHYSICAL CHARACTERISTICS</h4>
 										</div>
-                              <table className="w-full h-22 md:h-24">
-                                <tbody>
-                                  <tr className="border-b border-yellow-500 h-1/4">
-                                    <td className="bg-yellow-50 px-2 md:px-4 py-1 font-bold text-gray-900 border-r border-yellow-500 text-xs">
-                                      Color
-                                    </td>
-                                    <td className="px-2 md:px-4 py-1 text-gray-700 text-xs break-words">
-                                      {variety.physical.color}
-                                    </td>
-                                  </tr>
-                                  <tr className="border-b border-yellow-500 h-1/4">
-                                    <td className="bg-yellow-50 px-2 md:px-4 py-1 font-bold text-gray-900 border-r border-yellow-500 text-xs">
-                                      Leaf Size
-                                    </td>
-                                    <td className="px-2 md:px-4 py-1 text-gray-700 text-xs break-words">
-                                      {variety.physical.leafSize}
-                                    </td>
-                                  </tr>
-                                  {variety.physical.poreVolume !== "N/A" && (
-                                    <tr className="border-b border-yellow-500 h-1/4">
-                                      <td className="bg-yellow-50 px-1 md:px-2 py-1 font-bold text-gray-900 border-r border-yellow-500 text-xs">
-                                        Pore Vol.(MI/Gm)
-                                      </td>
-                                      <td className="px-1 md:px-2 py-1 text-gray-700 text-xs break-words">
-                                        {variety.physical.poreVolume}
-                                      </td>
-                                    </tr>
-                                  )}
-                                  {variety.physical.fillingValue !== "N/A" && (
-                                    <tr className="h-1/4">
-                                      <td className="bg-yellow-50 px-1 md:px-2 py-1 font-bold text-gray-900 border-r border-yellow-500 text-xs">
-                                        Fill Value(CC/GM)
-                                      </td>
-                                      <td className="px-1 md:px-2 py-1 text-gray-700 text-xs break-words">
-                                        {variety.physical.fillingValue}
-                                      </td>
-                                    </tr>
-                                  )}
-                                </tbody>
-                              </table>
+                              <div className="p-2 md:p-3 space-y-2">
+                                <div className="flex justify-between items-center border-b border-yellow-200 pb-1">
+                                  <span className="bg-yellow-50 px-2 py-1 font-bold text-gray-900 text-xs rounded">
+                                    Color
+                                  </span>
+                                  <span className="text-gray-700 text-xs text-right flex-1 ml-2">
+                                    {variety.physical.color}
+                                  </span>
+                                </div>
+                                <div className="flex justify-between items-center border-b border-yellow-200 pb-1">
+                                  <span className="bg-yellow-50 px-2 py-1 font-bold text-gray-900 text-xs rounded">
+                                    Leaf Size
+                                  </span>
+                                  <span className="text-gray-700 text-xs text-right flex-1 ml-2">
+                                    {variety.physical.leafSize}
+                                  </span>
+                                </div>
+                                {variety.physical.poreVolume !== "N/A" && (
+                                  <div className="flex justify-between items-center border-b border-yellow-200 pb-1">
+                                    <span className="bg-yellow-50 px-2 py-1 font-bold text-gray-900 text-xs rounded">
+                                      Pore Vol.(MI/Gm)
+                                    </span>
+                                    <span className="text-gray-700 text-xs text-right flex-1 ml-2">
+                                      {variety.physical.poreVolume}
+                                    </span>
+                                  </div>
+                                )}
+                                {variety.physical.fillingValue !== "N/A" && (
+                                  <div className="flex justify-between items-center">
+                                    <span className="bg-yellow-50 px-2 py-1 font-bold text-gray-900 text-xs rounded">
+                                      Fill Value(CC/GM)
+                                    </span>
+                                    <span className="text-gray-700 text-xs text-right flex-1 ml-2">
+                                      {variety.physical.fillingValue}
+                                    </span>
+                                  </div>
+                                )}
+                              </div>
 									</div>
 
 									{/* Chemical Characteristics */}

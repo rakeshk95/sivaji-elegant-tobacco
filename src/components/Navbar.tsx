@@ -12,36 +12,36 @@ const Navbar = () => {
     { name: "HOME", href: "/" },
     { name: "ABOUT US", href: "/about" },
     { name: "TOBACCO VARIETIES", href: "/varieties" },
-    { name: "FARM GRADES", href: "/farm-grades" },
     { name: "CONTACT", href: "/contact" },
   ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-black border-b border-pink-200/20 z-50 w-screen">
       <div className="container mx-auto px-2 md:px-4 overflow-hidden max-w-full">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <div className="flex items-center justify-center w-48 md:w-64 h-16 md:h-20">
+          <Link to="/" className="flex items-center hover-scale">
+            <div className="flex items-center justify-center w-56 md:w-80 h-20 md:h-24 animate-scale-in">
               <img 
                 src={logoImage} 
                 alt="Sivaji Enterprises Logo" 
-                className="w-full h-full object-contain max-w-full"
+                className="w-full h-full object-contain max-w-full hover-glow"
               />
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
-            {navItems.map((item) => (
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-8 animate-slide-in-right">
+            {navItems.map((item, index) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`font-bold transition-colors duration-200 text-sm lg:text-base ${
+                className={`font-bold transition-all duration-300 text-lg lg:text-xl hover-scale ${
                   location.pathname === item.href
                     ? "text-yellow-400"
                     : "text-white hover:text-yellow-400"
                 }`}
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {item.name}
               </Link>
@@ -69,7 +69,7 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`font-bold transition-colors duration-200 px-4 py-2 text-sm ${
+                  className={`font-bold transition-colors duration-200 px-4 py-2 text-lg ${
                     location.pathname === item.href
                       ? "text-yellow-400 bg-gray-800"
                       : "text-white hover:text-yellow-400 hover:bg-gray-800"

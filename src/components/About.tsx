@@ -13,14 +13,6 @@ const About = () => {
         >
           <div className="absolute inset-0 bg-black/30"></div>
           
-          {/* Profile Heading at Top */}
-          <div className="absolute top-8 md:top-12 left-1/2 transform -translate-x-1/2 z-20 px-4">
-            <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 px-4 md:px-6 py-2 md:py-3 rounded-xl mx-auto inline-block animate-slide-up border-2 border-yellow-300 shadow-lg max-w-[90vw]">
-              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black drop-shadow-lg text-center">
-                PROFILE
-              </h1>
-            </div>
-          </div>
 
 
          

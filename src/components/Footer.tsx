@@ -9,10 +9,22 @@ const Footer = () => {
         {/* Contact Details */}
         <div className="mb-6">
           <p className="text-white mb-2 flex items-center justify-center gap-2">
-            <span className="text-yellow-400">📞</span> +918096112016
+            <span className="text-yellow-400">📞</span> 
+            <a 
+              href="tel:+918096112016" 
+              className="hover:text-yellow-400 transition-colors duration-300 cursor-pointer"
+            >
+              +918096112016
+            </a>
           </p>
           <p className="text-white mb-2 flex items-center justify-center gap-2">
-            <span className="text-yellow-400">✉️</span> shivajibusiness392@gmail.com
+            <span className="text-yellow-400">✉️</span> 
+            <a 
+              href="mailto:shivajibusiness392@gmail.com" 
+              className="hover:text-yellow-400 transition-colors duration-300 cursor-pointer"
+            >
+              shivajibusiness392@gmail.com
+            </a>
           </p>
           <p className="text-white mb-4">
             <span className="text-yellow-400">📍</span> Address: 1-9, MUKTHINUTHALAPADU, ONGOLE, ANDHRA PRADESH, INDIA

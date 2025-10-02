@@ -17,7 +17,7 @@ const EMAILJS_CONFIG = {
   serviceId: 'service_hljn15i', // Your EmailJS service connected to Gmail SMTP
   templateId: 'template_zve799k', // Your email template
   userId: 'jPZ_unrUx5cVeiYMw', // Your EmailJS Public Key
-  toEmail: 'shivajibusiness392@gmail.com' // Your business email address
+  toEmail: 'kalvapudimukesh@gmail.com' // Your business email address
 };
 
 // Using EmailJS (client-side email service)
@@ -34,6 +34,10 @@ export const sendEmailWithEmailJS = async (formData: ContactFormData): Promise<E
       message: formData.message,
       to_email: EMAILJS_CONFIG.toEmail,
       reply_to: formData.email,
+      // Standard EmailJS parameters
+      to_name: 'Sivaji Enterprises',
+      to_email_address: EMAILJS_CONFIG.toEmail,
+      user_email: EMAILJS_CONFIG.toEmail,
     };
     
     console.log('Sending email with params:', templateParams);

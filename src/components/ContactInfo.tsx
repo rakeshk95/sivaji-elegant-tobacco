@@ -116,9 +116,9 @@ const ContactInfo = () => {
           </div>
 
           {/* Contact Cards Grid */}
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4 md:gap-8 mb-8 md:mb-12">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4 md:gap-8 mb-8 md:mb-12 animate-slide-up">
             {/* Office Address Card */}
-            <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 p-4 md:p-6 border border-gray-100 hover:border-green-300">
+            <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 p-4 md:p-6 border border-gray-100 hover:border-green-300 animate-scale-in hover-scale h-48 md:h-52 flex flex-col">
               <div className="flex items-center mb-3 md:mb-4">
                 <div className="w-10 h-10 md:w-14 md:h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mr-2 md:mr-3 group-hover:scale-110 transition-transform duration-300">
                   <svg className="w-5 h-5 md:w-8 md:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -127,45 +127,53 @@ const ContactInfo = () => {
                 </div>
                 <h3 className="text-lg md:text-xl font-bold text-gray-800">Office Address</h3>
               </div>
-              <div className="text-gray-600 space-y-1 md:space-y-2">
+              <div className="text-gray-600 space-y-1 md:space-y-2 flex-1">
                 <p className="font-semibold text-gray-800 text-sm md:text-base">SIVAJI ENTERPRISES</p>
                 <p className="text-sm md:text-base">MUKTHINUTHALAPADU</p>
-                <p className="text-sm md:text-base">ONGOLE, ANDHRA PRADESH</p>
-                <p className="font-semibold text-sm md:text-base">523262</p>
+                <p className="text-sm md:text-base">ONGOLE, ANDHRA PRADESH 523262</p>
+                
               </div>
             </div>
 
             {/* Phone Number Card */}
-            <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 p-4 md:p-6 border border-gray-100 hover:border-yellow-300">
-              <div className="flex items-center mb-3 md:mb-4">
-                <div className="w-10 h-10 md:w-14 md:h-14 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl flex items-center justify-center mr-2 md:mr-3 group-hover:scale-110 transition-transform duration-300">
-                  <svg className="w-5 h-5 md:w-8 md:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                  </svg>
+            <a href="tel:+918096112016" className="block h-48 md:h-52">
+              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 p-4 md:p-6 border border-gray-100 hover:border-yellow-300 animate-scale-in hover-scale cursor-pointer h-full flex flex-col" style={{ animationDelay: '0.1s' }}>
+                <div className="flex items-center mb-3 md:mb-4">
+                  <div className="w-10 h-10 md:w-14 md:h-14 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl flex items-center justify-center mr-2 md:mr-3 group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-5 h-5 md:w-8 md:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                    </svg>
+                  </div>
+                  <h3 className="text-lg md:text-xl font-bold text-gray-800">Phone Number</h3>
                 </div>
-                <h3 className="text-lg md:text-xl font-bold text-gray-800">Phone Number</h3>
+                <div className="text-gray-600 flex-1 flex flex-col justify-center">
+                  <p className="text-base md:text-lg font-semibold text-gray-800 hover:text-yellow-600 transition-colors duration-300">
+                    +918096112016
+                  </p>
+                  <p className="text-xs md:text-sm mt-1">Available 24/7 for your inquiries</p>
+                </div>
               </div>
-              <div className="text-gray-600">
-                <p className="text-base md:text-lg font-semibold text-gray-800">+918096112016</p>
-                <p className="text-xs md:text-sm mt-1">Available 24/7 for your inquiries</p>
-              </div>
-            </div>
+            </a>
 
             {/* E-Mail Card */}
-            <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 p-4 md:p-6 border border-gray-100 hover:border-blue-300 md:col-span-2 lg:col-span-1">
-              <div className="flex items-center mb-3 md:mb-4">
-                <div className="w-10 h-10 md:w-14 md:h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mr-2 md:mr-3 group-hover:scale-110 transition-transform duration-300">
-                  <svg className="w-5 h-5 md:w-8 md:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                  </svg>
+            <a href="mailto:shivajibusiness392@gmail.com" className="block h-48 md:h-52">
+              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 p-4 md:p-6 border border-gray-100 hover:border-blue-300 animate-scale-in hover-scale cursor-pointer h-full flex flex-col" style={{ animationDelay: '0.2s' }}>
+                <div className="flex items-center mb-3 md:mb-4">
+                  <div className="w-10 h-10 md:w-14 md:h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mr-2 md:mr-3 group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-5 h-5 md:w-8 md:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                  </div>
+                  <h3 className="text-lg md:text-xl font-bold text-gray-800">E-Mail</h3>
                 </div>
-                <h3 className="text-lg md:text-xl font-bold text-gray-800">E-Mail</h3>
+                <div className="text-gray-600 flex-1 flex flex-col justify-center">
+                  <p className="text-sm md:text-lg font-semibold text-gray-800 hover:text-blue-600 transition-colors duration-300">
+                    shivajibusiness392@gmail.com
+                  </p>
+                  <p className="text-xs md:text-sm mt-1">We respond within 24 hours</p>
+                </div>
               </div>
-              <div className="text-gray-600">
-                <p className="text-sm md:text-lg font-semibold text-gray-800">shivajibusiness392@gmail.com</p>
-                <p className="text-xs md:text-sm mt-1">We respond within 24 hours</p>
-              </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -352,11 +360,20 @@ const ContactInfo = () => {
           <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 md:mb-4 text-yellow-400">GET IN TOUCH WITH US</h2>
           <div className="w-full h-px bg-yellow-500 mb-4 md:mb-6"></div>
 
-          <p className="text-white mb-2 text-sm md:text-base">
+          <p className="text-white mb-2 text-sm md:text-base flex items-center justify-center gap-2">
+            <span className="text-yellow-400">📍</span>
             SIVAJI ENTERPRISES, MUKTHINUTHALAPADU, ONGOLE, ANDHRA PRADESH, 523262
           </p>
-          <p className="text-white mb-3 md:mb-4 text-sm md:text-base">
-           +918096112016, shivajibusiness392@gmail.com
+          <p className="text-white mb-3 md:mb-4 text-sm md:text-base flex items-center justify-center gap-2">
+            <a href="tel:+918096112016" className="hover:text-yellow-400 transition-colors duration-300 flex items-center gap-1">
+              <span className="text-yellow-400">📞</span>
+              +918096112016
+            </a>
+            <span className="text-gray-400">,</span>
+            <a href="mailto:shivajibusiness392@gmail.com" className="hover:text-yellow-400 transition-colors duration-300 flex items-center gap-1">
+              <span className="text-yellow-400">✉️</span>
+              shivajibusiness392@gmail.com
+            </a>
           </p>
 
           <div className="w-full h-px bg-yellow-500 mb-4 md:mb-6"></div>
