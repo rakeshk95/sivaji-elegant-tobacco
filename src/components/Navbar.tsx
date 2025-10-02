@@ -12,6 +12,7 @@ const Navbar = () => {
     { name: "HOME", href: "/" },
     { name: "ABOUT US", href: "/about" },
     { name: "TOBACCO VARIETIES", href: "/varieties" },
+    { name: "FARM GRADES", href: "/farm-grades" },
     { name: "CONTACT", href: "/contact" },
   ];
 
