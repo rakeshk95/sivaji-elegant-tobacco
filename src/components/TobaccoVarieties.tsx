@@ -1,12 +1,19 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import heroImage from "@/assets/tobacco-field-2.jpg";
+import oneImage from "@/assets/tobacco-leaves/one.png";
+import twoImage from "@/assets/tobacco-leaves/two.png";
+import threeImage from "@/assets/tobacco-leaves/three.png";
+import fourImage from "@/assets/tobacco-leaves/four.png";
+import fiveImage from "@/assets/tobacco-leaves/five.png";
+import sixImage from "@/assets/tobacco-leaves/six.png";
+import sevenImage from "@/assets/tobacco-leaves/seven.png";
 
 const TobaccoVarieties = () => {
 	const varieties = [
 		{
 			name: "Flue Cured Virginia Tobacco (Traditional)",
-      imagePath: "/src/assets/tobacco-leaves/one.png",
+      imagePath: oneImage,
 			planting: "Mid October to First week of November",
 			marketing: "February to April",
       physical: {
@@ -22,7 +29,7 @@ const TobaccoVarieties = () => {
 		},
 		{
 			name: "Flue Cured Virginia Tobacco (Mysore)",
-      imagePath: "/src/assets/tobacco-leaves/two.png",
+      imagePath: twoImage,
 			planting: "Early May",
 			marketing: "September to December",
       physical: {
@@ -38,7 +45,7 @@ const TobaccoVarieties = () => {
 		},
 		{
 			name: "Flue Cured Virginia (NLS)",
-      imagePath: "/src/assets/tobacco-leaves/three.png",
+      imagePath: threeImage,
 			planting: "Early October",
 			marketing: "February to April",
       physical: {
@@ -54,7 +61,7 @@ const TobaccoVarieties = () => {
 		},
 		{
 			name: "Flue Cured Virginia (SLS)",
-      imagePath: "/src/assets/tobacco-leaves/four.png",
+      imagePath: fourImage,
       planting: "Mid-October to Mid-November",
 			marketing: "February to May",
       physical: {
@@ -70,7 +77,7 @@ const TobaccoVarieties = () => {
 		},
 		{
 			name: "Indian Burley Tobacco",
-      imagePath: "/src/assets/tobacco-leaves/five.png",
+      imagePath: fiveImage,
       planting: "Late July to Early August",
 			marketing: "November to January",
       physical: {
@@ -86,7 +93,7 @@ const TobaccoVarieties = () => {
 		},
 		{
 			name: "Dark Fired Tobacco",
-      imagePath: "/src/assets/tobacco-leaves/six.png",
+      imagePath: sixImage,
       planting: "Mid August to Early September",
       marketing: "February to March",
       physical: {
@@ -102,7 +109,7 @@ const TobaccoVarieties = () => {
 		},
 		{
 			name: "Sun-Cured Burley Tobacco (Traditional)",
-      imagePath: "/src/assets/tobacco-leaves/seven.png",
+      imagePath: sevenImage,
       planting: "Early October to Early November",
       marketing: "April to June",
       physical: {
